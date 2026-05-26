@@ -3168,7 +3168,7 @@ case 'save': {
 case 'alive': {
   try {
     // 1. Add Reaction (Immediate Feedback)
-    await socket.sendMessage(sender, { react: { text: "🍷", key: msg.key } });
+    await socket.sendMessage(sender, { react: { text: "👋", key: msg.key } });
 
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     const cfg = await loadUserConfigFromMongo(sanitized) || {};
@@ -3892,7 +3892,7 @@ ${footer}`;
 // ==================== MAIN MENU ====================
 case 'menu': {
   try {
-    await socket.sendMessage(sender, { react: { text: "🗃️", key: msg.key } });
+    await socket.sendMessage(sender, { react: { text: "📖", key: msg.key } });
 
     let pingMsg = await socket.sendMessage(sender, { text: '`LOADING`' }, { quoted: msg });
     await socket.sendMessage(sender, { text: '`BOT/S MENU` ✅', edit: pingMsg.key });
@@ -4050,7 +4050,7 @@ case 'mainmenu': {
 // ==================== DOWNLOAD SUB MENU ====================
 case 'downloadmenu': {
   try {
-    await socket.sendMessage(sender, { react: { text: "⬇️", key: msg.key } });
+    await socket.sendMessage(sender, { react: { text: "📥", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/Nethmika-LK/Shala-MD-Database/refs/heads/main/Ditelse.json")).data;
     const { footer, imageurl, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
@@ -4065,7 +4065,7 @@ case 'downloadmenu': {
 // ==================== AI SUB MENU ====================
 case 'aimenu': {
   try {
-    await socket.sendMessage(sender, { react: { text: "🧠", key: msg.key } });
+    await socket.sendMessage(sender, { react: { text: "✨", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/Nethmika-LK/Shala-MD-Database/refs/heads/main/Ditelse.json")).data;
     const { footer, imageurl, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
@@ -4095,7 +4095,7 @@ case 'searchmenu': {
 // ==================== OWNER SUB MENU ====================
 case 'ownermenu': {
   try {
-    await socket.sendMessage(sender, { react: { text: "🔰", key: msg.key } });
+    await socket.sendMessage(sender, { react: { text: "🧑‍💻", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/Nethmika-LK/Shala-MD-Database/refs/heads/main/Ditelse.json")).data;
     const { footer, imageurl, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
@@ -4110,7 +4110,7 @@ case 'ownermenu': {
 // ==================== GROUP SUB MENU ====================
 case 'groupmenu': {
   try {
-    await socket.sendMessage(sender, { react: { text: "👥", key: msg.key } });
+    await socket.sendMessage(sender, { react: { text: "💑", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/Nethmika-LK/Shala-MD-Database/refs/heads/main/Ditelse.json")).data;
     const { footer, imageurl, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
@@ -4125,7 +4125,7 @@ case 'groupmenu': {
 // ==================== OTHER SUB MENU ====================
 case 'othermenu': {
   try {
-    await socket.sendMessage(sender, { react: { text: "🎯", key: msg.key } });
+    await socket.sendMessage(sender, { react: { text: "📑", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/Nethmika-LK/Shala-MD-Database/refs/heads/main/Ditelse.json")).data;
     const { footer, imageurl, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
