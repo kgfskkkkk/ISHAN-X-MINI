@@ -7236,8 +7236,8 @@ async function EmpirePair(number, res) {
           );
 
           const connectedButtons = [
-            { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: '⚡ ALIVE' }, type: 1 },
-            { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📋 MENU' }, type: 1 }
+            { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: '👋 𝘼𝙇𝙄𝙑𝙀' }, type: 1 },
+            { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📑 𝙈𝙀𝙉𝙐' }, type: 1 }
           ];
           const connectedFooter = '〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰';
 
