@@ -31,7 +31,7 @@
     "node-fetch": "^2.7.0",
     "node-cache": "^5.1.2",
     "file-type": "^16.5.4",
-    "canvas": "^3.2.3"
+    "canvas": "^3.2.3",
     "wa-sticker-formatter": "^4.4.4",
     "node-gtts": "^2.0.2",
     "qrcode": "^1.5.4",
