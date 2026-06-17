@@ -4340,7 +4340,7 @@ case 'menu': {
     )).data;
 
     const {
-      footer, aliveimg,
+      footer, imageurl3,
       version, botname, ownername, ownernumber,
       pairlink, platform
     } = ownerdata;
@@ -4447,7 +4447,7 @@ case 'menu': {
     ];
 
     await socket.sendMessage(sender, {
-      image: { url: imageurl },
+      image: { url: imageurl3 },
       caption: menuMessage,
       footer: footer,
       buttons: buttons,
