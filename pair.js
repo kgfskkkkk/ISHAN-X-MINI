@@ -4340,7 +4340,7 @@ case 'menu': {
     )).data;
 
     const {
-      footer, imageurlp,
+      footer, aliveimg,
       version, botname, ownername, ownernumber,
       pairlink, platform
     } = ownerdata;
