@@ -4339,7 +4339,7 @@ case 'menu': {
     )).data;
 
     const {
-      footer, imageurl,
+      footer, imageurl0,
       version, botname, ownername, ownernumber,
       pairlink, platform
     } = ownerdata;
@@ -4389,10 +4389,10 @@ case 'menu': {
     const dayEmojiMap = { 0: '☀️', 1: '🌙', 2: '🔥', 3: '💧', 4: '⚡', 5: '🌟', 6: '🎉' };
     const dateEmoji = dayEmojiMap[nowSL.day()] || '📆';
 
-    const menuMessage = `*╭〔 𝘼𝙎𝙃𝙄𝙔𝘼-𝙈𝘿 𝙑.4 𝙈𝙀𝙉𝙐 〕┈⊷❖●►*
+    const menuMessage = `*╭〔 𝙄𝙎𝙃𝘼𝙉-𝙓 𝙈𝘿 7.0.0 𝙋𝙍𝙊 𝙈𝙀𝙉𝙐 〕┈⊷❖●►*
 *❒╮*
 *├➣👩‍💼ᴜꜱᴇʀ:* *${pushname}*
-*├➣${greetingEmoji}ɢʀᴇᴇᴛɪɴɢ:* *\`${sinhalaGreeting}\`*
+*├➣${greetingEmoji}ɢʀᴇᴇᴛɪɴɢ:* *\*${sinhalaGreeting}\**
 *├➣📟ᴜᴘᴛɪᴍᴇ:* *${uptimeStr}*
 *├➣💾ʀᴀᴍ: ${ramUsed}MB / ${ramTotal}MB*
 *├➣🖥️ᴄᴘᴜ ᴜꜱᴀɢᴇ:* *${cpuUsage}*
@@ -4431,7 +4431,7 @@ case 'menu': {
           { title: "❄ ɴᴇᴡꜱ ᴄᴍᴅ",           description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ɴᴇᴡꜱ ᴍᴇɴᴜ 📰",           id: `${config.PREFIX}newsmenu` },
           { title: "❄ ꜱᴛɪᴄᴋᴇʀ ᴄᴍᴅ",        description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ꜱᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ 🎴",        id: `${config.PREFIX}stickermenu` },
           { title: "❄ ꜱᴇᴛᴛɪɴɢꜱ ᴄᴍᴅ",        description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 V4.0.0 ʙᴏᴛ ꜱᴇᴛᴛɪɴɢꜱ 🧑‍🔧",        id: `${config.PREFIX}settings` },
-          { title: "❄ ᴘɪɴɢ2 (ᴅᴀꜱʜʙᴏᴀʀᴅ)",  description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ᴘɪɴɢ2 ɪᴍᴀɢᴇ ᴅᴀꜱʜʙᴏᴀʀᴅ ⚡",        id: `${config.PREFIX}ping2` }
+          { title: "❄ ᴘɪɴɢ2 ᴄᴍᴅ",  description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ᴘɪɴɢ2 ɪᴍᴀɢᴇ ᴅᴀꜱʜʙᴏᴀʀᴅ ⚡",        id: `${config.PREFIX}ping2` }
         ]
       }
     ];
@@ -4446,7 +4446,7 @@ case 'menu': {
     ];
 
     await socket.sendMessage(sender, {
-      image: { url: imageurl },
+      image: { url: imageurl0 },
       caption: menuMessage,
       footer: footer,
       buttons: buttons,
@@ -4464,12 +4464,12 @@ case 'mainmenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "🏡", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl7, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🥏 ${botname} Mᴀɪɴ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* alive\n│ *ヤ Use :* *Check bot online or no.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* ping\n│ *ヤ Use :* *Check bot's speed.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* ping2\n│ *ヤ Use :* *Check bot's speed (dashboard style).* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* menu\n│ *ヤ Use :* *Get bot's command list.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* system\n│ *ヤ Use :* *Get bot's system information.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* pair\n│ *ヤ Use :* *Get bot session pairing code.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* pp\n│ *ヤ Use :* *Get user profile picture.* \n╰──────────●●►`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl7 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
@@ -4479,12 +4479,12 @@ case 'downloadmenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "📥", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl1, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🥏 ${botname} Dᴏᴡɴʟᴏᴀᴅ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* youtube / yt / mp4\n│ *ヤ Use :* *Download YouTube video.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* song / play / audio\n│ *ヤ Use :* *Download YouTube audio.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* facebook / fb\n│ *ヤ Use :* *Download Facebook video.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* tiktok / tt\n│ *ヤ Use :* *Download TikTok video.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* instagram / ig / insta\n│ *ヤ Use :* *Download Instagram media.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* mf / mediafire\n│ *ヤ Use :* *Download Mediafire file.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* gdrive\n│ *ヤ Use :* *Download Google Drive file.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* ringtone\n│ *ヤ Use :* *Search and download ringtones.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* twitter / twdl\n│ *ヤ Use :* *Download Twitter video.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* apk / apks\n│ *ヤ Use :* *Search & Download APK from Aptoide.* \n╰──────────●●►`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl1 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
@@ -4494,12 +4494,12 @@ case 'aimenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "✨", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl2, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🥏 ${botname} Aɪ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* ai / chat / gpt\n│ *ヤ Use :* *Chat with AI assistant.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* aiimg / aiimg2\n│ *ヤ Use :* *Generate AI image from text.* \n╰──────────●●►`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl2 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
@@ -4509,12 +4509,12 @@ case 'searchmenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "🔍", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl3, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🥏 ${botname} Sᴇᴀʀᴄʜ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* google / search\n│ *ヤ Use :* *Search on Google.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* img\n│ *ヤ Use :* *Search and get images.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* apksearch / apks\n│ *ヤ Use :* *Search and download APK files.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* yts / youtubesearch\n│ *ヤ Use :* *Search YouTube videos & get results.* \n│ *ヤ Example :* .yts Alan Walker\n╰──────────●●►`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl3 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
@@ -4524,12 +4524,12 @@ case 'ownermenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "🧑‍💻", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl8, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🥏 ${botname} Oᴡɴᴇʀ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* help\n│ *ヤ Use :* *Open bot help center.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* setting\n│ *ヤ Use :* *Open bot settings panel.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* wtype\n│ *ヤ Use :* *Change bot work type.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* prefix\n│ *ヤ Use :* *Change bot command prefix.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* setbotname\n│ *ヤ Use :* *Change bot display name.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* setlogo\n│ *ヤ Use :* *Set bot profile picture.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* botpresence\n│ *ヤ Use :* *Toggle bot online presence.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* autotyping\n│ *ヤ Use :* *Toggle fake typing animation.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* rstatus\n│ *ヤ Use :* *Toggle auto read status.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* arm\n│ *ヤ Use :* *Toggle auto reply mode.* \n╰──────────●●►`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl8 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
@@ -4539,12 +4539,12 @@ case 'groupmenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "💑", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl9, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🥏 ${botname} Gʀᴏᴜᴘ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \`RAM Usage\` : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* tagall\n│ *ヤ Use :* *Tag all group members.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* addadmin\n│ *ヤ Use :* *Promote member to admin.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* deladmin\n│ *ヤ Use :* *Demote admin to member.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* admins\n│ *ヤ Use :* *List all group admins.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* block\n│ *ヤ Use :* *Block a member.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* unblock\n│ *ヤ Use :* *Unblock a member.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* online\n│ *ヤ Use :* *Check who is online in group.* \n╰──────────●●►`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl9 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
@@ -4554,12 +4554,12 @@ case 'othermenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "📑", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl4, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🥏 ${botname} Oᴛʜᴇʀ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* tourl / upload\n│ *ヤ Use :* *Upload image and get URL.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* vv / save\n│ *ヤ Use :* *Save view once media.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* emojis\n│ *ヤ Use :* *Get emoji sticker pack.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* font\n│ *ヤ Use :* *Convert text to fancy font.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* savecontact\n│ *ヤ Use :* *Save contact as VCF file.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* cfn\n│ *ヤ Use :* *Generate fake WhatsApp number.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* jid\n│ *ヤ Use :* *Get user WhatsApp JID.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* gjid\n│ *ヤ Use :* *Get group JID.* \n╰──────────●●►`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl4 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
@@ -4569,12 +4569,12 @@ case 'logomenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "🎨", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl5, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🥏 ${botname} ʟᴏɢᴏ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n*🎌 Anime & Movies*\n╭──────────●●►\n│ *ヤ .naruto* ➣ Naruto Shippuden style\n│ *ヤ .dragonball* ➣ Dragon Ball style\n│ *ヤ .onepiece* ➣ One Piece logo style\n│ *ヤ .marvel* ➣ Marvel logo style\n│ *ヤ .deadpool* ➣ Deadpool logo style\n│ *ヤ .harrypotter* ➣ Harry Potter style\n╰──────────●●►\n\n*✨ Glow & Effects*\n╭──────────●●►\n│ *ヤ .neon* ➣ 3D Neon sign board\n│ *ヤ .glitch* ➣ Glitch text effect\n│ *ヤ .rainbow* ➣ Rainbow text effect\n│ *ヤ .glass* ➣ Transparent glass\n│ *ヤ .frostedGlass* ➣ Frosted glass\n│ *ヤ .neonGlass* ➣ 3D Neon glass\n╰──────────●●►\n\n*💰 Metal & Luxury*\n╭──────────●●►\n│ *ヤ .gold* ➣ Golden metal\n│ *ヤ .silver* ➣ Silver metal\n│ *ヤ .diamond* ➣ Diamond effect\n│ *ヤ .luxury* ➣ Luxury gold\n│ *ヤ .modern* ➣ Modern metallic\n╰──────────●●►\n\n*🌿 Nature & Elements*\n╭──────────●●►\n│ *ヤ .fire* ➣ Burning fire\n│ *ヤ .water* ➣ Underwater\n│ *ヤ .smoke* ➣ Smoky text\n│ *ヤ .ice* ➣ Frozen ice\n│ *ヤ .crystal* ➣ Shiny crystal\n│ *ヤ .sand* ➣ Beach sand\n│ *ヤ .sky* ➣ Cloud sky\n│ *ヤ .space* ➣ Galaxy text\n╰──────────●●►\n\n*🎄 Holidays & Art*\n╭──────────●●►\n│ *ヤ .christmas* ➣ Christmas style\n│ *ヤ .halloween* ➣ Halloween pumpkin\n│ *ヤ .3dcomic* ➣ 3D Comic style\n│ *ヤ .graffiti* ➣ Graffiti text\n│ *ヤ .blackpink* ➣ Blackpink style\n╰──────────●●►\n\n*📝 Usage:* .[effect] [text]\n*📌 Example:* .naruto Uzumaki\n*🎲 Random:* .logo random [text]\n*🔄 Batch:* .logo batch naruto,neon,gold [text]`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl5 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
@@ -4584,12 +4584,12 @@ case 'newsmenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "📰", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl10, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🥏 ${botname} Nᴇᴡꜱ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* adanews\n│ *ヤ Use :* *Get latest Ada Derana news.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* sirasanews\n│ *ヤ Use :* *Get latest Sirasa news.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* lankadeepanews\n│ *ヤ Use :* *Get latest Lankadeepa news.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* gagananews\n│ *ヤ Use :* *Get latest Gagana news.* \n╰──────────●●►\n\n╭──────────●●►\n│ *ヤ Command :* newslist\n│ *ヤ Use :* *List all available news sources.* \n╰──────────●●►`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl10 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
@@ -4599,12 +4599,12 @@ case 'stickermenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "🎴", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl11, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🎴 ${botname} Sᴛɪᴄᴋᴇʀ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* attp\n│ *ヤ Use :* *Create an animated text sticker.* \n╰──────────●●►\n\n*📝 Usage:* ${config.PREFIX}attp <text>\n*📌 Example:* ${config.PREFIX}attp Hello`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl11 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
@@ -4677,12 +4677,12 @@ case 'moviemenu': {
   try {
     await socket.sendMessage(sender, { react: { text: "🎞️", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
-    const { footer, imageurl, botname } = ownerdata;
+    const { footer, imageurl6, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
     const menuc = `*_🎞️ ${botname} Mᴏᴠɪᴇ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \`RAM Usage\` : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* movie / sinhalasub / films / mv\n│ *ヤ Use :* *Search & Download movies from sinhalasub.lk*\n╰──────────●●►\n\n*📌 How to use:*\n╭──────────●●►\n│ 1️⃣ Type: *.movie <movie name>*\n│ 2️⃣ Reply with movie number\n│ 3️⃣ Reply with quality number\n│ 🎬 Movie will be sent as a document!\n╰──────────●●►\n\n*📌 Example:*\n╭──────────●●►\n│ *.movie avengers*\n│ *.mv spider man*\n│ *.films thor*\n╰──────────●●►\n\n*⚠️ Max file size: 2GB*\n*🌐 Source: sinhalasub.lk*`;
-    await socket.sendMessage(sender, { image: { url: imageurl }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
+    await socket.sendMessage(sender, { image: { url: imageurl6 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
 }
