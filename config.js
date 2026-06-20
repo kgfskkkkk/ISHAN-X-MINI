@@ -1,4 +1,4 @@
-const BOT_NAME_FANCY = '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+const BOT_NAME_FANCY = '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗';
 
 const config = {
   AUTO_VIEW_STATUS: 'true',
@@ -12,12 +12,12 @@ const config = {
   NEWSLETTER_JID: '120363421675697127@newsletter',
   OTP_EXPIRY: 300000,
   WORK_TYPE: 'public',
-  OWNER_NUMBER: process.env.OWNER_NUMBER || '94752135878',
+  OWNER_NUMBER: process.env.OWNER_NUMBER || '9478761926',
   CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbC3JfG77qVXz1CbJM3l',
-  BOT_NAME: '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰',
+  BOT_NAME: '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗',
   BOT_VERSION: '4.0.0V',
-  OWNER_NAME: '𝐀ʏᴇꜱʜ 𝐓ʜᴇᴍɪʏᴀ 🥷🇱🇰',
+  OWNER_NAME: '© 𝙸𝚂𝙷𝙰𝙽-𝙼𝙰𝙳𝚄𝚂𝙰𝙽𝙺𝙴',
   IMAGE_PATH: 'https://files.catbox.moe/om3gnp.png',
-  BOT_FOOTER: '> *〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰*',
+  BOT_FOOTER: '> *𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*',
   BUTTON_IMAGES: { ALIVE: 'https://files.catbox.moe/qb2puf.jpeg' }
 };
