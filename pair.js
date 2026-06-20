@@ -27,7 +27,7 @@ const {
   DisconnectReason
 } = require('@dnuzi/baileys');
 // ---------------- CONFIG ----------------
-const BOT_NAME_FANCY = '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗';
+const BOT_NAME_FANCY = '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗❤️';
 
 const config = {
   AUTO_VIEW_STATUS: 'true',
@@ -44,7 +44,7 @@ const config = {
   OWNER_NUMBER: process.env.OWNER_NUMBER || '94778761926',
   CHANNEL_LINK: 'https://chat.whatsapp.com/HRIlSELlxO5JQo2gYL4MzV?mode=gi_t',
   BOT_NAME: '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗',
-  BOT_VERSION: '4.0.0V',
+  BOT_VERSION: '*7.0.0 ᴘʀᴏ*',
   OWNER_NAME: '© 𝙸𝚂𝙷𝙰𝙽-𝙼𝙰𝙳𝚄𝚂𝙰𝙽𝙺𝙴',
   IMAGE_PATH: 'https://files.catbox.moe/qb2puf.jpeg',
   BOT_FOOTER: '> *𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*',
