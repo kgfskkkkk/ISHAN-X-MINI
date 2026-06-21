@@ -27,7 +27,7 @@ const {
   DisconnectReason
 } = require('@dnuzi/baileys');
 // ---------------- CONFIG ----------------
-const BOT_NAME_FANCY = '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗';
+const BOT_NAME_FANCY = '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊';
 
 const config = {
   AUTO_VIEW_STATUS: 'true',
@@ -4389,10 +4389,10 @@ case 'menu': {
     const dayEmojiMap = { 0: '☀️', 1: '🌙', 2: '🔥', 3: '💧', 4: '⚡', 5: '🌟', 6: '🎉' };
     const dateEmoji = dayEmojiMap[nowSL.day()] || '📆';
 
-    const menuMessage = `*╭〔 𝙄𝙎𝙃𝘼𝙉-𝙓 𝙈𝘿 7.0.0 𝙋𝙍𝙊 𝙈𝙀𝙉𝙐 〕┈⊷❖●►*
+    const menuMessage = `*╭〔 𝙄𝙎𝙃𝘼𝙉-𝙓 𝙈𝘿 𝙋𝙍𝙊 𝙈𝙀𝙉𝙐 〕┈⊷❖●►*
 *❒╮*
 *├➣👩‍💼ᴜꜱᴇʀ:* *${pushname}*
-*├➣${greetingEmoji}ɢʀᴇᴇᴛɪɴɢ:* *\*${sinhalaGreeting}\**
+*├➣${greetingEmoji}ɢʀᴇᴇᴛɪɴɢ:* *\*${sinhalaGreeting}\*
 *├➣📟ᴜᴘᴛɪᴍᴇ:* *${uptimeStr}*
 *├➣💾ʀᴀᴍ: ${ramUsed}MB / ${ramTotal}MB*
 *├➣🖥️ᴄᴘᴜ ᴜꜱᴀɢᴇ:* *${cpuUsage}*
@@ -4408,30 +4408,30 @@ case 'menu': {
 *❒╯*
 *╰──────────────❍┈⊷❖◆►*
 
-👋 ${sinhalaGreeting} *${pushname}* ඔබව *𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 V.4* බෝට් *MENU* වෙත සාදරයෙන් පිළිගන්නවා... 🙏`;
+👋 ${sinhalaGreeting} *${pushname}* ඔබව *𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊* බෝට් *MENU* වෙත සාදරයෙන් පිළිගන්නවා... 🙏`;
 
     const sections = [
       {
         title: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴍᴇɴᴜ ʟɪꜱᴛ 🙌",
         rows: [
-          { title: "❄ ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴍᴅ",      description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴇɴᴜ 📥",      id: `${config.PREFIX}downloadmenu` },
-          { title: "❄ ᴀɪ ᴄᴍᴅ",             description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ᴀɪ ᴍᴇɴᴜ ✨",             id: `${config.PREFIX}aimenu` },
-          { title: "❄ ꜱᴇᴀʀᴄʜ ᴄᴍᴅ",         description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ 🔍",         id: `${config.PREFIX}searchmenu` },
-          { title: "❄ ᴏᴛʜᴇʀ ᴄᴍᴅ",          description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ᴏᴛʜᴇʀ ᴍᴇɴᴜ 📑",          id: `${config.PREFIX}othermenu` },
-          { title: "❄ ʟᴏɢᴏ ᴄᴍᴅ",           description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ʟᴏɢᴏ ᴍᴇɴᴜ 🎨",           id: `${config.PREFIX}logomenu` },
-          { title: "❄ ᴍᴏᴠɪᴇ ᴄᴍᴅ",          description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ᴍᴏᴠɪᴇ ᴍᴇɴᴜ 🎥",           id: `${config.PREFIX}moviemenu` }
+          { title: "❄ ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴍᴅ",      description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴇɴᴜ 📥",      id: `${config.PREFIX}downloadmenu` },
+          { title: "❄ ᴀɪ ᴄᴍᴅ",             description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ᴀɪ ᴍᴇɴᴜ ✨",             id: `${config.PREFIX}aimenu` },
+          { title: "❄ ꜱᴇᴀʀᴄʜ ᴄᴍᴅ",         description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ 🔍",         id: `${config.PREFIX}searchmenu` },
+          { title: "❄ ᴏᴛʜᴇʀ ᴄᴍᴅ",          description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ᴏᴛʜᴇʀ ᴍᴇɴᴜ 📑",          id: `${config.PREFIX}othermenu` },
+          { title: "❄ ʟᴏɢᴏ ᴄᴍᴅ",           description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ʟᴏɢᴏ ᴍᴇɴᴜ 🎨",           id: `${config.PREFIX}logomenu` },
+          { title: "❄ ᴍᴏᴠɪᴇ ᴄᴍᴅ",          description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ᴍᴏᴠɪᴇ ᴍᴇɴᴜ 🎥",           id: `${config.PREFIX}moviemenu` }
         ]
       },
       {
-        title: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴍᴇɴᴜ ʟɪꜱᴛ 🙌",
+        title: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 𝚂𝙴𝙲𝙾𝙽𝙳 ᴍᴇɴᴜ ʟɪꜱᴛ 🙌",
         rows: [
-          { title: "❄ ᴍᴀɪɴ ᴄᴍᴅ",           description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ᴍᴀɪɴ ᴍᴇɴᴜ 🏡",           id: `${config.PREFIX}mainmenu` },
-          { title: "❄ ᴏᴡɴᴇʀ ᴄᴍᴅ",          description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ᴏᴡɴᴇʀ ᴍᴇɴᴜ 🧑‍💻",        id: `${config.PREFIX}ownermenu` },
-          { title: "❄ ɢʀᴏᴜᴘ ᴄᴍᴅ",          description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ɢʀᴏᴜᴘ ᴍᴇɴᴜ 💑",          id: `${config.PREFIX}groupmenu` },
-          { title: "❄ ɴᴇᴡꜱ ᴄᴍᴅ",           description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ɴᴇᴡꜱ ᴍᴇɴᴜ 📰",           id: `${config.PREFIX}newsmenu` },
-          { title: "❄ ꜱᴛɪᴄᴋᴇʀ ᴄᴍᴅ",        description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ꜱᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ 🎴",        id: `${config.PREFIX}stickermenu` },
-          { title: "❄ ꜱᴇᴛᴛɪɴɢꜱ ᴄᴍᴅ",        description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 V4.0.0 ʙᴏᴛ ꜱᴇᴛᴛɪɴɢꜱ 🧑‍🔧",        id: `${config.PREFIX}settings` },
-          { title: "❄ ᴘɪɴɢ2 ᴄᴍᴅ",  description: "𝙰𝚂𝙷𝙸𝚈𝙰-𝙼𝙳 ᴠ.4.0.0 ᴘɪɴɢ2 ɪᴍᴀɢᴇ ᴅᴀꜱʜʙᴏᴀʀᴅ ⚡",        id: `${config.PREFIX}ping2` }
+          { title: "❄ ᴍᴀɪɴ ᴄᴍᴅ",           description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ᴍᴀɪɴ ᴍᴇɴᴜ 🏡",           id: `${config.PREFIX}mainmenu` },
+          { title: "❄ ᴏᴡɴᴇʀ ᴄᴍᴅ",          description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ᴏᴡɴᴇʀ ᴍᴇɴᴜ 🧑‍💻",        id: `${config.PREFIX}ownermenu` },
+          { title: "❄ ɢʀᴏᴜᴘ ᴄᴍᴅ",          description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ɢʀᴏᴜᴘ ᴍᴇɴᴜ 💑",          id: `${config.PREFIX}groupmenu` },
+          { title: "❄ ɴᴇᴡꜱ ᴄᴍᴅ",           description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ɴᴇᴡꜱ ᴍᴇɴᴜ 📰",           id: `${config.PREFIX}newsmenu` },
+          { title: "❄ ꜱᴛɪᴄᴋᴇʀ ᴄᴍᴅ",         description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ꜱᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ 🐱",        id: `${config.PREFIX}stickermenu` },
+          { title: "❄ ꜱᴇᴛᴛɪɴɢꜱ ᴄᴍᴅ",        description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ʙᴏᴛ ꜱᴇᴛᴛɪɴɢꜱ 🧑‍🔧",        id: `${config.PREFIX}settings` },
+          { title: "❄ ᴘɪɴɢ2 ᴄᴍᴅ",  description: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴠ.𝟽.𝟶.𝟶 𝙿𝚁𝙾 ᴘɪɴɢ2 ɪᴍᴀɢᴇ ᴅᴀꜱʜʙᴏᴀʀᴅ ⚡",        id: `${config.PREFIX}ping2` }
         ]
       }
     ];
@@ -4597,13 +4597,13 @@ case 'newsmenu': {
 // ==================== STICKER SUB MENU ====================
 case 'stickermenu': {
   try {
-    await socket.sendMessage(sender, { react: { text: "🎴", key: msg.key } });
+    await socket.sendMessage(sender, { react: { text: "🐱", key: msg.key } });
     const ownerdata = (await axios.get("https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata")).data;
     const { footer, imageurl11, botname } = ownerdata;
     const ramUsed = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const ut = process.uptime();
     const rtime = `${Math.floor(ut/3600)}h ${Math.floor((ut%3600)/60)}m ${Math.floor(ut%60)}s`;
-    const menuc = `*_🎴 ${botname} Sᴛɪᴄᴋᴇʀ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* attp\n│ *ヤ Use :* *Create an animated text sticker.* \n╰──────────●●►\n\n*📝 Usage:* ${config.PREFIX}attp <text>\n*📌 Example:* ${config.PREFIX}attp Hello`;
+    const menuc = `*_🐱 ${botname} Sᴛɪᴄᴋᴇʀ Mᴇɴᴜ_*\n\n*╭──────────────◉◉➤*\n*├➣ ⏱️ \𝗨𝗣 𝗧𝗜𝗠𝗘\ : -* ${rtime}\n*├➣ 💾 \𝗥𝗔𝗠 𝗨𝘀𝗮𝗴𝗲\ : -* ${ramUsed} MB\n*╰──────────────◉◉➤*\n\n╭──────────●●►\n│ *ヤ Command :* attp\n│ *ヤ Use :* *Create an animated text sticker.* \n╰──────────●●►\n\n*📝 Usage:* ${config.PREFIX}attp <text>\n*📌 Example:* ${config.PREFIX}attp Hello`;
     await socket.sendMessage(sender, { image: { url: imageurl11 }, caption: menuc, footer: footer, buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "↩️ MENU COMMAND" }, type: 1 }], headerType: 4 }, { quoted: msg });
   } catch(e) { reply(`*🚩 Menu Error :-*\n${e.message}`); }
   break;
@@ -4626,14 +4626,14 @@ case 'atp': {
     const text = args.join(' ').trim();
     if (!text) {
       return await socket.sendMessage(sender, {
-        text: "*🥺 APKO APKE NAME KA STICKER BANANA HAI*\n\n" +
-              `*Use:* \`${config.PREFIX}attp APKA NAME\`\n\n` +
-              `*Example:*\n${config.PREFIX}attp Bilal`
+        text: "*🥺 YOU WANT TO CREATE A STICKER WITH YOUR NAME*\n\n" +
+              `*Use:* \`${config.PREFIX}attp YOUR NAME\`\n\n` +
+              `*Example:*\n${config.PREFIX}attp ISHAN`
       }, { quoted: msg });
     }
 
     await socket.sendMessage(sender, { react: { text: "✨", key: msg.key } });
-    await socket.sendMessage(sender, { text: "*✨ APKA STICKER BAN RAHA HAI*\n*THORA SA INTAZAR KARE...☺️*" }, { quoted: msg });
+    await socket.sendMessage(sender, { text: "*✨ ✨ YOUR STICKER IS BEING CREATED*\n*PLEASE WAIT A MOMENT...☺️*" }, { quoted: msg });
 
     const encodedText = encodeURIComponent(text);
     const gifRes = await axios.get(`https://api-fix.onrender.com/api/maker/attp?text=${encodedText}`, { responseType: 'arraybuffer' });
