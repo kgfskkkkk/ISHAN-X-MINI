@@ -3391,7 +3391,7 @@ case 'save': {
 
   } catch (error) {
     console.error('❌ Save error:', error);
-    await socket.sendMessage(sender, { text: '*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝙵𝚊𝚒𝚕𝚎𝚍 𝚃𝚘 𝚂𝚊𝚟𝚎 𝚂𝚝𝚊𝚝𝚞𝚜 !*' }, { quoted: msg });
+    await socket.sendMessage(sender, { text: '*𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 🧑‍💻🇱🇰 𝙵𝚊𝚒𝚕𝚎𝚍 𝚃𝚘 𝚂𝚊𝚟𝚎 𝚂𝚝𝚊𝚝𝚞𝚜 !*' }, { quoted: msg });
   }
   break;
 }
@@ -3403,8 +3403,8 @@ case 'alive': {
 
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     const cfg = await loadUserConfigFromMongo(sanitized) || {};
-    const botName = cfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰'; // Default fancy name
-    const logo = cfg.logo || config.RCD_IMAGE_PATH;
+    const botName = cfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 🧑‍💻🇱🇰'; // Default fancy name
+    const logo = cfg.logo || config.IMAGE_PATH;
 
     // 2. Calculate Uptime
     const startTime = socketCreationTime.get(number) || Date.now();
@@ -3471,12 +3471,12 @@ END:VCARD` } }
     // 9. Beautiful & Art-full Caption Style
     const text = ` 𝐇𝙸 👋 ${botName}  𝐁𝙾𝚃 𝐔𝚂𝙴𝚁 𝐈 𝐀𝙼 𝐀𝙻𝙸𝚅𝙴 𝐍𝙾𝚆 💫
 
-*╭━〔 𝘼𝙎𝙃𝙄𝙔𝘼-𝙈𝘿 𝙑.4 ᴀʟɪᴠᴇ 〕━┈⊷❖●►*  
+*╭━〔 𝙄𝙎𝙃𝘼𝙉-𝙓 𝙈𝘿 7.0.0 𝙋𝙍𝙊 ᴀʟɪᴠᴇ 〕━┈⊷❖●►*  
 *├➣👩‍💼ᴜꜱᴇʀ:* @${sender.split('@')[0]}
-*├➣🧑‍💻ᴏᴡɴᴇʀ:* ${config.OWNER_NAME || '𝙰𝚈𝙴𝚂𝙷'}  
-*├➣⚙️ᴘʀᴇꜰɪx:* [.]  
-*├➣🧬ᴠᴇʀꜱɪᴏɴ:* 4.0.0  
-*├➣💻ᴘʟᴀᴛꜰʀᴏᴍ:* ${process.env.PLATFORM || 'Heroku'}  
+*├➣🧑‍💻ᴏᴡɴᴇʀ:* ${config.OWNER_NAME || '*© 𝙸𝚂𝙷𝙰𝙽-𝙼𝙰𝙳𝚄𝚂𝙰𝙽𝙺𝙴*'}  
+*├➣⚙️ᴘʀᴇꜰɪx:* *[.]*  
+*├➣🧬ᴠᴇʀꜱɪᴏɴ:* *7.0.0 ᴘʀᴏ*  
+*├➣💻ᴘʟᴀᴛꜰʀᴏᴍ:* ${process.env.PLATFORM || '*ɪꜱʜᴀɴ-x ᴄʟᴏᴜᴅ*'}  
 *├➣📟ᴜᴘᴛɪᴍᴇ:* ${hours}h ${minutes}m ${seconds}s  
 *├➣${aliveGreetingEmoji}ɢʀᴇᴇᴛɪɴɢ:* \`${aliveGreeting}\`
 *├➣💾ʀᴀᴍ:* ${aliveRamUsed}MB / ${aliveRamTotal}MB
@@ -3486,7 +3486,7 @@ END:VCARD` } }
 *├➣${aliveDateEmoji}ᴅᴀᴛᴇ:* ${aliveDate}
 *╰──────────────⊷❖✦►*
 
-> *〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰*`;
+> *𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*`;
 
     // 5. Button System
     const buttons = [
