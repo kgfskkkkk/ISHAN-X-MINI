@@ -48,7 +48,7 @@ const config = {
   OWNER_NAME: '© 𝙸𝚂𝙷𝙰𝙽-𝙼𝙰𝙳𝚄𝚂𝙰𝙽𝙺𝙴',
   IMAGE_PATH: 'https://files.catbox.moe/qb2puf.jpeg',
   SET_IMAGE_PATH: 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/4cAVV.jpg',
-  BOT_FOOTER: '> *𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*',
+  BOT_FOOTER: '> _*𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*',
   BUTTON_IMAGES: { ALIVE: 'https://files.catbox.moe/qb2puf.jpeg' }
 };
 // ---------------- MONGO SETUP ----------------
