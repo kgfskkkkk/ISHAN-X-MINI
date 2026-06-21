@@ -37,7 +37,7 @@ const config = {
   PREFIX: '.',
   MAX_RETRIES: 3,
   GROUP_INVITE_LINK: 'https://chat.whatsapp.com/BImUUJCwXoTITNHX61yUsb',
-  RCD_IMAGE_PATH: 'https://files.catbox.moe/qb2puf.jpeg',
+  RCD_IMAGE_PATH: 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000002050720bbe7a9b0c41bdfa04.png',
   NEWSLETTER_JID: 'jid',
   OTP_EXPIRY: 300000,
   WORK_TYPE: 'public',
