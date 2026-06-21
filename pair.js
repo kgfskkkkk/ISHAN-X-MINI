@@ -1047,7 +1047,7 @@ case 'mp4': {
         const { footer } = ownerdata;
 
         const searchResults = await ytsv(q);
-        if (!searchResults.videos.length) return await socket.sendMessage(sender, { text: '*❌ I couldn't find anything :(*' }, { quoted: msg });
+        if (!searchResults.videos.length) return await socket.sendMessage(sender, { text: '*❌ මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
 
         const video = searchResults.videos[0];
 
