@@ -1964,10 +1964,10 @@ case 'settings': {
 
 *𝐔se ${currentConfig.PREFIX || '.'}𝐒etting 𝐓o 𝐂hange 𝐒ettings 𝐕ia 𝐌enu*
     
-> _*〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.3 🥷🇱🇰*_`; 
+> _*𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*_`; 
           
     await socket.sendMessage(sender, {
-      image: { url: currentConfig.logo || config.RCD_IMAGE_PATH },
+      image: { url: currentConfig.logo || config.SET_IMAGE_PATH },
       caption: settingsText
     }, { quoted: msg });
     
