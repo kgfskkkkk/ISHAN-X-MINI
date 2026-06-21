@@ -1326,7 +1326,7 @@ case 'down_1080d': {
 // 🥹🥹🥹
 case 'setting': {
   // 1. Acknowledge the command
-  await socket.sendMessage(sender, { react: { text: '⚙️', key: msg.key } });
+  await socket.sendMessage(sender, { react: { text: '🧑‍🔧', key: msg.key } });
 
   try {
     // 2. Data Sanitization & Permission Logic
@@ -1363,7 +1363,7 @@ END:VCARD` } }
     const settingOptions = {
       name: 'single_select',
       paramsJson: JSON.stringify({
-        title: `𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 𝐒𝐄𝐓𝐓𝐈𝐍𝐆 𝐍𝐄𝐖 🧑‍🔧`,
+        title: `𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 𝐒𝐄𝐓𝐓𝐈𝐍𝐆 𝐍𝐄𝐖 ⚙️`,
         sections: [
           {
             title: '🍷 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 ᴘᴇʀꜱᴏɴᴀʟɪᴢᴀᴛɪᴏɴ',
