@@ -929,7 +929,7 @@ if (!isOwner) {
     // 🔹 Load bot name dynamically
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     let cfg = await loadUserConfigFromMongo(sanitized) || {};
-    let botName = cfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    let botName = cfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 🧑‍💻🇱🇰';
 
     // 🔹 Fake contact for quoting
     const shonux = {
@@ -1002,7 +1002,7 @@ case 'mp4': {
         const ytsv = require('yt-search');
 
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර වචන කිහිපයක් ලියන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ Provide a URL or a keyword*' }, { quoted: msg });
 
         // ✅ URL detect කළොත් direct download කරන්න (720p default)
         const isYtUrl = /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|shorts\/)|youtu\.be\/)[\w\-]+/.test(q);
@@ -1028,18 +1028,18 @@ case 'mp4': {
             }
 
             if (!json || !json.status || !json.download?.link) {
-                return await socket.sendMessage(sender, { text: '*📛 Video download කළ නොහැකි විය. API error. නැවත උත්සාහ කරන්න.*' }, { quoted: msg });
+                return await socket.sendMessage(sender, { text: '*❌ Video download කළ නොහැකි විය. API error. නැවත උත්සාහ කරන්න.*' }, { quoted: msg });
             }
             await socket.sendMessage(sender, {
                 video: { url: json.download.link },
                 mimetype: 'video/mp4',
-                caption: `🎥 *${json.title}*\n\n\`${json.download.label}\`\n\n> *〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰*`
+                caption: `🎬 *${json.title}*\n\n\`${json.download.label}\`\n\n> *𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*`
             }, { quoted: msg });
             await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
             break;
         }
 
-        await socket.sendMessage(sender, { react: { text: '🎥', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '🎬', key: msg.key } });
 
         const ownerdata = (await axios.get(
             'https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata'
@@ -1047,7 +1047,7 @@ case 'mp4': {
         const { footer } = ownerdata;
 
         const searchResults = await ytsv(q);
-        if (!searchResults.videos.length) return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+        if (!searchResults.videos.length) return await socket.sendMessage(sender, { text: '*❌ I couldn't find anything :(*' }, { quoted: msg });
 
         const video = searchResults.videos[0];
 
@@ -1065,10 +1065,10 @@ case 'mp4': {
             caption: caption,
             footer: footer,
             buttons: [{
-                buttonText: 'Download Format ❏',
+                buttonText: '𝐒𝐄𝐋𝐄𝐂𝐓 𝐐𝐔𝐀𝐋𝐈𝐓𝐘',
                 sections: [
                     {
-                        title: '🎥 Video Format',
+                        title: '🎬 Video Format',
                         rows: [
                             { header: '360p', title: '360p Quality Video', description: '360p quality download', id: `${prefix}down_360 ${video.url}` },
                             { header: '480p', title: '480p Quality Video', description: '480p quality download', id: `${prefix}down_480 ${video.url}` },
@@ -1091,7 +1091,7 @@ case 'mp4': {
 
     } catch (e) {
         console.error('Video Error:', e);
-        await socket.sendMessage(sender, { text: '*🚩 Youtube Error*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*❌ Youtube Error*' }, { quoted: msg });
     }
     break;
 }
@@ -1178,7 +1178,7 @@ case 'down_1080': {
         const quality = qualityMap[command] || '360';
 
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ Provide a URL or a keyword*' }, { quoted: msg });
 
         const ownerdata = (await axios.get(
             'https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata'
@@ -1220,21 +1220,21 @@ case 'down_1080': {
 
         if (!json || !json.status || !json.download?.link) {
             return await socket.sendMessage(sender, {
-                text: '*📛 Video download කළ නොහැකි විය. API error. නැවත උත්සාහ කරන්න.*'
+                text: '*❌ Video download කළ නොහැකි විය. API error. නැවත උත්සාහ කරන්න.*'
             }, { quoted: msg });
         }
 
         await socket.sendMessage(sender, {
             video: { url: json.download.link },
             mimetype: 'video/mp4',
-            caption: `🎥 *${json.title}*\n\n\`${json.download.label}\`\n\n${footer}`
+            caption: `🎬 *${json.title}*\n\n\`${json.download.label}\`\n\n${footer}`
         }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
 
     } catch (e) {
         console.error('Video DL Error:', e);
-        await socket.sendMessage(sender, { text: '*📛 Video Error*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*❌ Video Error*' }, { quoted: msg });
     }
     break;
 }
@@ -1248,7 +1248,7 @@ case 'down_1080d': {
         const quality = qualityMap[command] || '360';
 
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ Provide a URL or a keyword*' }, { quoted: msg });
 
         const ownerdata = (await axios.get(
             'https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata'
@@ -1292,7 +1292,7 @@ case 'down_1080d': {
 
         if (!json || !json.status || !json.download?.link) {
             return await socket.sendMessage(sender, {
-                text: '*📛 Video download කළ නොහැකි විය. API error. නැවත උත්සාහ කරන්න.*'
+                text: '* Video download කළ නොහැකි විය. API error. නැවත උත්සාහ කරන්න.*'
             }, { quoted: msg });
         }
 
@@ -1311,14 +1311,14 @@ case 'down_1080d': {
             mimetype: 'video/mp4',
             fileName: `${json.title}.mp4`,
             jpegThumbnail: resizedThumb,
-            caption: `🎥 *${json.title}*\n\n\`${json.download.label}\`\n\n${footer}`
+            caption: `🎬 *${json.title}*\n\n\`${json.download.label}\`\n\n${footer}`
         }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
 
     } catch (e) {
         console.error('Video Doc DL Error:', e);
-        await socket.sendMessage(sender, { text: '*📛 Video Error*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*❌ Video Error*' }, { quoted: msg });
     }
     break;
 }
@@ -1356,17 +1356,17 @@ END:VCARD` } }
 
     // 3. Load Configuration
     const currentConfig = await loadUserConfigFromMongo(sanitized) || {};
-    const botName = currentConfig.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰'; // Default name fallback
+    const botName = currentConfig.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 🧑‍💻🇱🇰'; // Default name fallback
     const prefix = currentConfig.PREFIX || config.PREFIX;
 
     // 4. Construct the Interactive Menu
     const settingOptions = {
       name: 'single_select',
       paramsJson: JSON.stringify({
-        title: `𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝐒𝐄𝐓𝐓𝐈𝐍𝐆 𝐍𝐄𝐖 ❄`,
+        title: `𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 𝐒𝐄𝐓𝐓𝐈𝐍𝐆 𝐍𝐄𝐖 ❄`,
         sections: [
           {
-            title: '🍷 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 ᴘᴇʀꜱᴏɴᴀʟɪᴢᴀᴛɪᴏɴ',
+            title: '🍷 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 ᴘᴇʀꜱᴏɴᴀʟɪᴢᴀᴛɪᴏɴ',
             highlight_label: 'New',
             rows: [
               { 
@@ -1378,7 +1378,7 @@ END:VCARD` } }
           },
           
           {
-            title: '🍷 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 ᴛʏᴘᴇ ᴏꜰ ᴡᴏʀᴋ',
+            title: '🍷 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 ᴛʏᴘᴇ ᴏꜰ ᴡᴏʀᴋ',
             rows: [
               { title: '❄ ➤ 𝐏𝐮𝐛𝐥𝐢𝐜 𝐌𝐨𝐝𝐞', description: 'Bot works for everyone', id: `${prefix}wtype public` },
               { title: '❄ ➤ 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐌𝐨𝐝𝐞', description: 'Bot works only for you', id: `${prefix}wtype private` },
@@ -1388,7 +1388,7 @@ END:VCARD` } }
           },
           
           {
-            title: '🍷 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩  ɢʜᴏꜱᴛ & ᴘʀɪᴠᴀᴄʏ',
+            title: '🍷 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾  ɢʜᴏꜱᴛ & ᴘʀɪᴠᴀᴄʏ',
             rows: [
               { title: '❄ ➤ 𝐀𝐥𝐰𝐚𝐲𝐬 𝐎𝐧𝐥𝐢𝐧𝐞 ▸ 𝐎𝐍', description: 'Show online badge', id: `${prefix}botpresence online` },
               { title: '❄ ➤ 𝐀𝐥𝐰𝐚𝐲𝐬 𝐎𝐧𝐥𝐢𝐧𝐞 ▸ 𝐎𝐅𝐅', description: 'Hide online badge', id: `${prefix}botpresence offline` },
@@ -1399,7 +1399,7 @@ END:VCARD` } }
             ],
           },
           {
-            title: '🍷 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 ᴀᴜᴛᴏᴍᴀᴛɪᴏɴ & ᴛᴏᴏʟꜱ',
+            title: '🍷 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 ᴀᴜᴛᴏᴍᴀᴛɪᴏɴ & ᴛᴏᴏʟꜱ',
             rows: [
               { title: '❄ ➤ 𝐀𝐮𝐭𝐨 𝐒𝐞𝐞𝐧 𝐒𝐭𝐚𝐭𝐮𝐬 ▸ 𝐎𝐍', description: 'View statuses automatically', id: `${prefix}rstatus on` },
               { title: '❄ ➤ 𝐀𝐮𝐭𝐨 𝐒𝐞𝐞𝐧 𝐒𝐭𝐚𝐭𝐮𝐬 ▸ 𝐎𝐅𝐅', description: 'Do not view statuses', id: `${prefix}rstatus off` },
@@ -1410,7 +1410,7 @@ END:VCARD` } }
             ],
           },
           {
-            title: '🍷 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 ᴍᴇꜱꜱᴀɢᴇ ʜᴀɴᴅʟɪɴɢ',
+            title: '🍷 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 ᴍᴇꜱꜱᴀɢᴇ ʜᴀɴᴅʟɪɴɢ',
             rows: [
               { title: '❄ 𝐑𝐞𝐚𝐝 𝐀𝐥𝐥 : 𝐎𝐍', description: 'Blue tick everything', id: `${prefix}mread all` },
               { title: '❄ 𝐑𝐞𝐚𝐝 𝐂𝐦𝐝𝐬 : 𝐎𝐍', description: 'Blue tick commands only', id: `${prefix}mread cmd` },
