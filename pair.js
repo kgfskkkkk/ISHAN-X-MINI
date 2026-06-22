@@ -2633,7 +2633,7 @@ case 'botpair': {
                     interactiveMessage: proto.Message.InteractiveMessage.create({
                         body: proto.Message.InteractiveMessage.Body.create({
                             text: `
-╔══『 🍷 *𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐏𝙰𝙸𝚁𝙸𝙽𝙶 𝐂𝙾𝙳𝙴* 』═══❒
+╔══『 🍷 *★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★* 』═══❒
 ╠⦁
 ╠⦁  👤 *User:* ${msg.pushName || 'Guest'}
 ╠⦁  📱 *Number:* +${number}
@@ -2652,11 +2652,11 @@ case 'botpair': {
 ╚═══════════════════❒`
                         }),
                         footer: proto.Message.InteractiveMessage.Footer.create({
-                            text: "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Secure Connection"
+                            text: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 🧑‍💻🇱🇰 Secure Connection"
                         }),
                         header: proto.Message.InteractiveMessage.Header.create({
-                            title: "𝙰𝚂𝙷𝙸𝚈𝙰 𝚙𝚊𝚒𝚛 𝚌𝚘𝚍𝚎",
-                            subtitle: "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰",
+                            title: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝚙𝚊𝚒𝚛 𝚌𝚘𝚍𝚎",
+                            subtitle: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 🧑‍💻🇱🇰",
                             hasMediaAttachment: false
                         }),
                         nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
@@ -2692,7 +2692,7 @@ case 'botpair': {
         await socket.sendMessage(sender, { text: pairCode }, { quoted: msg });
 
     } catch (err) {
-        console.error("❌ 𝙰𝚂𝙷𝙸𝚈𝙰 𝙿𝙰𝙸𝚁 𝙴𝚁𝚁𝙾𝚁::", err);
+        console.error("❌ 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝙰𝙸𝚁 𝙴𝚁𝚁𝙾𝚁::", err);
         await socket.sendMessage(sender, { react: { text: '❌', key: msg.key } });
         
         await socket.sendMessage(sender, {
