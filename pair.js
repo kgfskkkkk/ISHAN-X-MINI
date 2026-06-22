@@ -2359,16 +2359,16 @@ case 'upload': {
 > _*𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*_`
                         },
                         footer: {
-                            text: "𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊"
+                            text: "𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 🧑‍💻🇱🇰"
                         },
                         header: {
                             title: "Media Uploaded Successfully",
-                            subtitle: "𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊",
+                            subtitle: "𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 🧑‍💻🇱🇰",
                             hasMediaAttachment: false
                         },
                         contextInfo: {
                             externalAdReply: {
-                                title: "𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊",
+                                title: "𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 🧑‍💻🇱🇰",
                                 body: "Click buttons below to copy or open",
                                 thumbnailUrl: botLogo,
                                 sourceUrl: mediaUrl,
