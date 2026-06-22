@@ -3639,10 +3639,10 @@ case 'ping2': {
 
       ctx.fillStyle = C.cyan;
       ctx.font = "bold 24px sans-serif";
-      ctx.fillText("⚡ 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 SYSTEM DASHBOARD", 40, 50);
+      ctx.fillText("⚡ ISHANN-X PRO SYSTEM DASHBOARD", 40, 50);
       ctx.fillStyle = C.subtext;
       ctx.font = "16px sans-serif";
-      ctx.fillText("Heroku Instance • Real-Time Monitor", 40, 75);
+      ctx.fillText("BOT Instance • Real-Time Monitor", 40, 75);
 
       const boxY = 110;
       const boxW = 280;
@@ -3721,7 +3721,7 @@ case 'ping2': {
       const pillY = 360;
       const pillH = 60;
       const pills = [
-        { l: "HOST", v: "Heroku", c: C.blue },
+        { l: "HOST", v: "ISHAN-X CLOUD", c: C.blue },
         { l: "PLATFORM", v: "Linux x64", c: C.green },
         { l: "BOT UPTIME", v: botUptime.split(' ')[0], c: C.purple },
         { l: "LATENCY", v: `${pingSpeed}ms`, c: C.cyan },
@@ -3750,7 +3750,7 @@ case 'ping2': {
       ctx.textAlign = "center";
       ctx.fillStyle = C.subtext;
       ctx.font = "italic 12px sans-serif";
-      ctx.fillText(`𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 Dashboard™ • ${new Date().toLocaleString()}`, W / 2, H - 15);
+      ctx.fillText(`𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 ᴘʀᴏ Dashboard™ • ${new Date().toLocaleString()}`, W / 2, H - 15);
 
       return canvas.toBuffer("image/png");
     };
@@ -3759,7 +3759,7 @@ case 'ping2': {
 
     await socket.sendMessage(sender, {
       image: imageBuffer,
-      caption: `*— Bot Status ⌬*\n• *Runtime :* ${formatUptime(process.uptime())}\n• *Response Speed :* ${(0.0094).toFixed(4)} ms\n• *CPU Usage :* ${(Math.floor(Math.random() * 40) + 5) + '%'}\n\n—\n*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳*`
+      caption: `*— Bot Status ⌬*\n• *Runtime :* ${formatUptime(process.uptime())}\n• *Response Speed :* ${(0.0094).toFixed(4)} ms\n• *CPU Usage :* ${(Math.floor(Math.random() * 40) + 5) + '%'}\n\n—\n*𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊*`
     }, { quoted: msg });
 
   } catch (error) {
