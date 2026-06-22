@@ -3764,7 +3764,7 @@ case 'ping2': {
 
   } catch (error) {
     console.error('Ping2 error:', error);
-    await socket.sendMessage(sender, { text: '*🚩 Ping2 Error!! (canvas module may not be installed — run: npm install canvas)*' }, { quoted: msg });
+    await socket.sendMessage(sender, { text: '*❌ Ping2 Error!! (canvas module may not be installed — run: npm install canvas)*' }, { quoted: msg });
   }
   break;
 }
@@ -3796,7 +3796,7 @@ case 'bots': {
     let loadMsg;
     try {
         loadMsg = await socket.sendMessage(safeSender, { 
-            text: `🔄 *𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝐒𝐘𝐒𝐓𝐄𝐌 𝐁𝐎𝐎𝐓...*` 
+            text: `🔄 *𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐒𝐘𝐒𝐓𝐄𝐌 𝐁𝐎𝐎𝐓...*` 
         }, { quoted: msg });
     } catch (e) {
         console.log("Error sending load message:", e);
@@ -3808,7 +3808,7 @@ case 'bots': {
     // Animation 1: Connection (Using backticks to prevent SyntaxError)
     await sleep(500);
     await socket.sendMessage(safeSender, { 
-        text: `📡 *Connecting to 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Server...*
+        text: `📡 *Connecting to 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Server...*
 [⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜] 0%`, 
         edit: loadKey 
     });
@@ -3828,8 +3828,8 @@ case 'bots': {
         console.warn("MongoDB Config Load Failed:", err);
     }
 
-    const botName = "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰";
-    const defaultLogo = "https://files.catbox.moe/qb2puf.jpeg";
+    const botName = "★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★";
+    const defaultLogo = "https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000005eac720896d40b719700b3c0.png";
     const configLogo = cfg.logo || (typeof config !== 'undefined' ? config.RCD_IMAGE_PATH : null);
 
     // Animation 2: Security Check
@@ -3930,7 +3930,7 @@ ${botName} Protects This Data.
     const date = new Date().toLocaleDateString();
 
     // Using backticks for the main text block too
-    let text = `╔══『 🤖 *𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐁𝙾𝚃𝚂* 』═══❒
+    let text = `╔══『 🤖 *𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝐁𝙾𝚃𝚂* 』═══❒
 ╠⦁
 ╠⦁  📡 *𝚂𝚝𝚊𝚝𝚞𝚜:* 🟢 𝙾𝚗𝚕𝚒𝚗𝚎
 ╠⦁  📊 *𝙰𝚌𝚝𝚒𝚟𝚎 𝚄𝚜𝚎𝚛𝚜:* ${activeCount}
@@ -3972,15 +3972,15 @@ ${botName} Protects This Data.
     }
 
     const metaQuote = {
-      key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 STATUS" },
+      key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 STATUS" },
       message: { 
         contactMessage: { 
           displayName: botName, 
           vcard: `BEGIN:VCARD
 VERSION:3.0
-N:XMD;𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🍷;;
+N:XMD;𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 🍷;;
 FN:${botName}
-ORG:𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Systems
+ORG:𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Systems
 TEL;type=CELL;type=VOICE;waid=94700000000:+94 70 000 0000
 END:VCARD` 
         } 
@@ -4010,21 +4010,21 @@ END:VCARD`
                         text: text
                     },
                     footer: {
-                        text: `〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰`
+                        text: `𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰`
                     },
                     header: headerMedia
                         ? { ...headerMedia, hasMediaAttachment: true }
                         : {
                             title: botName,
-                            subtitle: `〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰`,
+                            subtitle: `𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰`,
                             hasMediaAttachment: false
                           },
                     contextInfo: {
                         externalAdReply: {
                             title: `${botName} 𝐌𝐨𝐧𝐢𝐭𝐨𝐫`,
-                            body: `〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰`,
+                            body: `𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰`,
                             thumbnailUrl: String(imagePayload.url || defaultLogo),
-                            sourceUrl: "https://whatsapp.com/channel/0029VbC3JfG77qVXz1CbJM3l",
+                            sourceUrl: "https://whatsapp.com/channel/0029VbAe6Nt545uv1kaCDE3j",
                             mediaType: 1,
                             renderLargerThumbnail: true
                         }
@@ -4069,7 +4069,7 @@ END:VCARD`
     console.error('ActiveSessions CRITICAL FAILURE:', globalError);
     try {
         await socket.sendMessage(sender, { 
-            text: '❌ *𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Error:* An unexpected system error occurred.' 
+            text: '❌ *𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 Error:* An unexpected system error occurred.' 
         }, { quoted: msg });
     } catch (e) {}
   }
@@ -4083,13 +4083,13 @@ case 'ytmp3': {
         const yts = require('ytsearch-venom');
 
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර වචන කිහිපයක් ලියන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර වචන කිහිපයක් ලියන්න Provide a URL or a keyword*' }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '🎧', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '🎼', key: msg.key } });
 
         const results = await yts(q.replace(/\?si=[^&]*/, ''));
         if (!results || !results.videos || results.videos.length === 0) {
-            return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+            return await socket.sendMessage(sender, { text: '*❌ මට කිසිවක් සොයාගත නොහැකි විය error :(*' }, { quoted: msg });
         }
 
         const ownerdata = (await axios.get(
@@ -4109,9 +4109,9 @@ case 'ytmp3': {
             `*┗━━━━━━━━━━━━━━━━❖●►*`;
 
         const buttons = [
-            { buttonId: `${prefix}ytaa ${result.url}`, buttonText: { displayText: '🎶 Audio Format' }, type: 1 },
-            { buttonId: `${prefix}ytad ${result.url}±${result.thumbnail}±${result.title}`, buttonText: { displayText: '📂 Document Format' }, type: 1 },
-            { buttonId: `${prefix}ytaap ${result.url}`, buttonText: { displayText: '🎤 Voice Format' }, type: 1 }
+            { buttonId: `${prefix}ytaa ${result.url}`, buttonText: { displayText: '🎶 𝗔𝗨𝗗𝗜𝗢' }, type: 1 },
+            { buttonId: `${prefix}ytad ${result.url}±${result.thumbnail}±${result.title}`, buttonText: { displayText: '📂 𝗗𝗢𝗖𝗨𝗠𝗘𝗡𝗧' }, type: 1 },
+            { buttonId: `${prefix}ytaap ${result.url}`, buttonText: { displayText: '🎤 𝗩𝗢𝗜𝗖𝗘' }, type: 1 }
         ];
 
         await socket.sendMessage(sender, {
@@ -4124,7 +4124,7 @@ case 'ytmp3': {
 
     } catch (e) {
         console.error('Song Error:', e);
-        await socket.sendMessage(sender, { text: '*🚩 Song Error!!*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*❌ Song Error!!*' }, { quoted: msg });
     }
     break;
 }
@@ -4133,7 +4133,7 @@ case 'ytaa': {
         const dlcore = require('sadaslk-dlcore');
 
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Provide a URL or a keyword*' }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '⬇️', key: msg.key } });
 
@@ -4149,7 +4149,7 @@ case 'ytaa': {
 
     } catch (e) {
         console.error('ytaa Error:', e);
-        await socket.sendMessage(sender, { text: '*🚩 Song Dl Error*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*❌ Song Dl Error*' }, { quoted: msg });
     }
     break;
 }
@@ -4161,7 +4161,7 @@ case 'ytaap': {
         ffmpeg.setFfmpegPath(ffmpegInstaller.path);
 
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Provide a URL or a keyword*' }, { quoted: msg });
 
         const result = await dlcore.ytmp3(q);
         if (!result || !result.url) throw new Error('No download URL returned');
@@ -4197,7 +4197,7 @@ case 'ytaap': {
 
     } catch (e) {
         console.error('ytaap Error:', e);
-        await socket.sendMessage(sender, { text: '*🚩 Song Dl Error*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*❌ Song Dl Error*' }, { quoted: msg });
     }
     break;
 }
@@ -4207,7 +4207,7 @@ case 'ytad': {
         const sharp = require('sharp');
 
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Provide a URL or a keyword*' }, { quoted: msg });
 
         const ownerdata = (await axios.get(
             'https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata'
@@ -4244,7 +4244,7 @@ case 'ytad': {
 
     } catch (e) {
         console.error('ytad Error:', e);
-        await socket.sendMessage(sender, { text: '*🚩 Song Dl Error*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*❌ Song Dl Error*' }, { quoted: msg });
     }
     break;
 }
