@@ -2673,7 +2673,7 @@ case 'botpair': {
                                     name: "cta_url",
                                     buttonParamsJson: JSON.stringify({
                                         display_text: "🍃 JOIN CHANNEL",
-                                        url: "https://whatsapp.com/channel/0029VbC3JfG77qVXz1CbJM3l",
+                                        url: "https://whatsapp.com/channel/0029VbAe6Nt545uv1kaCDE3j",
                                         merchant_url: "https://chat.whatsapp.com/HRIlSELlxO5JQo2gYL4MzV?mode=gi_t"
                                     })
                                 }
