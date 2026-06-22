@@ -3340,7 +3340,7 @@ case 'save': {
   try {
     const quotedMsg = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
     if (!quotedMsg) {
-      return await socket.sendMessage(sender, { text: '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝙿𝚕𝚎𝚊𝚜𝚎 𝚁𝚎𝚙𝚕𝚢 𝚃𝚘 𝙰 𝚂𝚝𝚊𝚝𝚞𝚜 !*' }, { quoted: msg });
+      return await socket.sendMessage(sender, { text: '𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 𝙿𝚕𝚎𝚊𝚜𝚎 𝚁𝚎𝚙𝚕𝚢 𝚃𝚘 𝙰 𝚂𝚝𝚊𝚝𝚞𝚜 !*' }, { quoted: msg });
     }
 
     try { await socket.sendMessage(sender, { react: { text: '🙈', key: msg.key } }); } catch(e){}
@@ -3351,11 +3351,11 @@ case 'save': {
     if (quotedMsg.imageMessage || quotedMsg.videoMessage || quotedMsg.audioMessage || quotedMsg.documentMessage || quotedMsg.stickerMessage) {
       const media = await downloadQuotedMedia(quotedMsg);
       if (!media || !media.buffer) {
-        return await socket.sendMessage(sender, { text: '*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩  𝙵𝚊𝚒𝚕𝚎𝚍 𝚃𝚘 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙼𝚎𝚍𝚒𝚊 !*' }, { quoted: msg });
+        return await socket.sendMessage(sender, { text: '*𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾  𝙵𝚊𝚒𝚕𝚎𝚍 𝚃𝚘 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙼𝚎𝚍𝚒𝚊 !*' }, { quoted: msg });
       }
 
       let captionText = media.caption || '';
-      const botCaption = `\n\n *𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝐒𝐓𝐀𝐓𝐔𝐒 𝐒𝐀𝐕𝐄𝐑* 📥`;
+      const botCaption = `\n\n *𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝐈𝐌𝐀𝐆𝐄 𝐒𝐀𝐕𝐄𝐑* 📥`;
 
       if (quotedMsg.imageMessage) {
         await socket.sendMessage(saveChat, { image: media.buffer, caption: captionText + botCaption });
@@ -3364,35 +3364,35 @@ case 'save': {
       } else if (quotedMsg.audioMessage) {
         await socket.sendMessage(saveChat, { audio: media.buffer, mimetype: media.mime || 'audio/mp4', ptt: media.ptt || false });
       } else if (quotedMsg.documentMessage) {
-        const fname = media.fileName || `𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Saved.${(await FileType.fromBuffer(media.buffer))?.ext || 'bin'}`;
+        const fname = media.fileName || `𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Saved.${(await FileType.fromBuffer(media.buffer))?.ext || 'bin'}`;
         await socket.sendMessage(saveChat, { document: media.buffer, fileName: fname, mimetype: media.mime || 'application/octet-stream', caption: botCaption });
       } else if (quotedMsg.stickerMessage) {
         await socket.sendMessage(saveChat, { sticker: media.buffer });
       }
 
-      await socket.sendMessage(sender, { text: '*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝐒𝐓𝐀𝐓𝐔𝐒 𝐒𝐀𝐕𝐄𝐑* 💫\n\n*✅ 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚍 𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢 !*' }, { quoted: msg });
+      await socket.sendMessage(sender, { text: '*𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝐈𝐌𝐀𝐆𝐄 𝐒𝐀𝐕𝐄𝐑* 💫\n\n*✅ 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚍 𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢 !*' }, { quoted: msg });
 
     } else if (quotedMsg.conversation || quotedMsg.extendedTextMessage) {
       const text = quotedMsg.conversation || quotedMsg.extendedTextMessage.text;
-      await socket.sendMessage(saveChat, { text: `*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩  𝐒𝐓𝐀𝐓𝐔𝐒 𝐒𝐀𝐕𝐄𝐑* 📥\n\n${text}\n\n` });
-      await socket.sendMessage(sender, { text: '*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝐒𝐓𝐀𝐓𝐔𝐒 𝐒𝐀𝐕𝐄𝐑* 💫\n\n*✅ 𝚃𝚎𝚡𝚝 𝚂𝚊𝚟𝚎𝚍 𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢 !*' }, { quoted: msg });
+      await socket.sendMessage(saveChat, { text: `*𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝐈𝐌𝐀𝐆𝐄 𝐒𝐀𝐕𝐄𝐑* 📥\n\n${text}\n\n` });
+      await socket.sendMessage(sender, { text: '*𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝐈𝐌𝐀𝐆𝐄 𝐒𝐀𝐕𝐄𝐑* 💫\n\n*✅ 𝚃𝚎𝚡𝚝 𝚂𝚊𝚟𝚎𝚍 𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢 !*' }, { quoted: msg });
     } else {
       if (typeof socket.copyNForward === 'function') {
         try {
           const key = msg.message?.extendedTextMessage?.contextInfo?.stanzaId || msg.key;
           await socket.copyNForward(saveChat, msg.key, true);
-          await socket.sendMessage(sender, { text: '*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝐒𝐓𝐀𝐓𝐔𝐒 𝐒𝐀𝐕𝐄𝐑* 💫\n\n*✅ 𝙵𝚘𝚛𝚠𝚊𝚛𝚍𝚎𝚍 𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢 !*' }, { quoted: msg });
+          await socket.sendMessage(sender, { text: '*𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝐈𝐌𝐀𝐆𝐄 𝐒𝐀𝐕𝐄𝐑* 💫\n\n*✅ 𝙵𝚘𝚛𝚠𝚊𝚛𝚍𝚎𝚍 𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢 !*' }, { quoted: msg });
         } catch (e) {
-          await socket.sendMessage(sender, { text: '*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝙴𝚛𝚛𝚘𝚛 𝙵𝚘𝚛𝚠𝚊𝚛𝚍𝚒𝚗𝚐 𝙼𝚎𝚜𝚜𝚊𝚐𝚎 !*' }, { quoted: msg });
+          await socket.sendMessage(sender, { text: '*𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 𝙴𝚛𝚛𝚘𝚛 𝙵𝚘𝚛𝚠𝚊𝚛𝚍𝚒𝚗𝚐 𝙼𝚎𝚜𝚜𝚊𝚐𝚎 !*' }, { quoted: msg });
         }
       } else {
-        await socket.sendMessage(sender, { text: '*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝚄𝚗𝚜𝚞𝚙𝚙𝚘𝚛𝚝𝚎𝚍 𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝚃𝚢𝚙𝚎 !*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 𝚄𝚗𝚜𝚞𝚙𝚙𝚘𝚛𝚝𝚎𝚍 𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝚃𝚢𝚙𝚎 !*' }, { quoted: msg });
       }
     }
 
   } catch (error) {
     console.error('❌ Save error:', error);
-    await socket.sendMessage(sender, { text: '*𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 🧑‍💻🇱🇰 𝙵𝚊𝚒𝚕𝚎𝚍 𝚃𝚘 𝚂𝚊𝚟𝚎 𝚂𝚝𝚊𝚝𝚞𝚜 !*' }, { quoted: msg });
+    await socket.sendMessage(sender, { text: '*𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 𝙵𝚊𝚒𝚕𝚎𝚍 𝚃𝚘 𝚂𝚊𝚟𝚎 𝚂𝚝𝚊𝚝𝚞𝚜 !*' }, { quoted: msg });
   }
   break;
 }
@@ -3543,7 +3543,7 @@ case 'ping': {
     return await socket.sendMessage(sender, { text: '*Pong ' + (final - inital) + ' Ms ⚡*', edit: pingMsg.key });
   } catch (e) {
     console.error('Ping command error:', e);
-    await socket.sendMessage(sender, { text: '*🚩 Ping Error!!*' }, { quoted: msg });
+    await socket.sendMessage(sender, { text: '*❌ Ping Error!!*' }, { quoted: msg });
   }
   break;
 }
