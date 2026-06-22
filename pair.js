@@ -2431,7 +2431,7 @@ ${error.message}`
         const messages = {
             noCity: "❗ *Please provide a city name!* \n📋 *Usage*: .weather [city name]",
             weather: (data) => `
-* 🍷ɪꜱʜᴀɴ-x ᴍᴅ ᴘʀᴏ ᴡᴇᴀᴛʜᴇʀ ʀᴇᴘᴏʀᴛ*
+* ⛅🌦️ 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 𝐖𝐄𝐀𝐓𝐇𝐄𝐑 𝐑𝐄𝐏𝐎𝐑𝐓
 
 *◈  ${data.name}, ${data.sys.country}  ◈*
 
