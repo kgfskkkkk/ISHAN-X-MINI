@@ -3048,7 +3048,7 @@ case 'fbd':
 case 'fbvideo': {
     try {
         const q = args.join(' ').trim();
-        if (!q || !q.includes('facebook.com')) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර facebook url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q || !q.includes('facebook.com')) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර facebook url එකක් ලබා දෙන්න Please provide the URL*' }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '📘', key: msg.key } });
 
@@ -3060,7 +3060,7 @@ case 'fbvideo': {
         // Fetch FB data
         const fbRes = await axios.get('https://www.movanest.xyz/v2/fbdown', { params: { url: q } });
         if (!fbRes.data.status || !fbRes.data.results?.[0]) {
-            return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+            return await socket.sendMessage(sender, { text: '*❌ error මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         }
         const r = fbRes.data.results[0];
         const fb = {
@@ -3077,7 +3077,7 @@ case 'fbvideo': {
 
         const caption =
             `*┎━━━━━━━━━━━━━━━━❖●►*\n` +
-            `*┃➤ 📘 Title       :* ${fb.title}\n` +
+            `*┃➤ 🎬 Title       :* ${fb.title}\n` +
             `*┃➤ 📺 Available   :* ${hasHD ? 'HD ' : ''}${hasSD ? 'SD' : ''}\n` +
             `*┃➤ 🔗 Link        :* ${q}\n` +
             `*┗━━━━━━━━━━━━━━━━❖●►*`;
@@ -3093,7 +3093,7 @@ case 'fbvideo': {
             caption: caption,
             footer: footer,
             buttons: [{
-                buttonText: 'Download Format ❏',
+                buttonText: '𝐒𝐄𝐋𝐄𝐂𝐓 𝐐𝐔𝐀𝐋𝐈𝐓𝐘',
                 sections: [
                     { title: '🎥 Video Format', rows: rows.slice(0, 2) },
                     { title: '📂 Document Format', rows: rows.slice(2) }
@@ -3103,66 +3103,66 @@ case 'fbvideo': {
 
     } catch (e) {
         console.error('FB Error:', e);
-        await socket.sendMessage(sender, { text: '*🚩 Facebook Download Error*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*❌ Facebook Download Error*' }, { quoted: msg });
     }
     break;
 }
 case 'fbhd': {
     try {
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Please provide the URL*' }, { quoted: msg });
 
         const ownerdata = (await axios.get('https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata')).data;
         const { footer } = ownerdata;
 
         const fbRes = await axios.get('https://www.movanest.xyz/v2/fbdown', { params: { url: q } });
-        if (!fbRes.data.status || !fbRes.data.results?.[0]) return await socket.sendMessage(sender, { text: '*📛 HD not available*' }, { quoted: msg });
+        if (!fbRes.data.status || !fbRes.data.results?.[0]) return await socket.sendMessage(sender, { text: '*❌ HD not available*' }, { quoted: msg });
         const r = fbRes.data.results[0];
         const hdLink = r.hdQualityLink || r.normalQualityLink;
-        if (!hdLink) return await socket.sendMessage(sender, { text: '*📛 HD not available*' }, { quoted: msg });
+        if (!hdLink) return await socket.sendMessage(sender, { text: '*❌ HD not available*' }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
         await socket.sendMessage(sender, { video: { url: hdLink }, mimetype: 'video/mp4', caption: `\`720p (HD)\`\n\n${footer}` }, { quoted: msg });
         await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
 
-    } catch (e) { await socket.sendMessage(sender, { text: '*🚩 HD Error*' }, { quoted: msg }); }
+    } catch (e) { await socket.sendMessage(sender, { text: '*❌ HD Error*' }, { quoted: msg }); }
     break;
 }
 case 'fbsd': {
     try {
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Please provide the URL*' }, { quoted: msg });
 
         const ownerdata = (await axios.get('https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata')).data;
         const { footer } = ownerdata;
 
         const fbRes = await axios.get('https://www.movanest.xyz/v2/fbdown', { params: { url: q } });
-        if (!fbRes.data.status || !fbRes.data.results?.[0]) return await socket.sendMessage(sender, { text: '*📛 SD not available*' }, { quoted: msg });
+        if (!fbRes.data.status || !fbRes.data.results?.[0]) return await socket.sendMessage(sender, { text: '*❌ SD not available*' }, { quoted: msg });
         const r = fbRes.data.results[0];
         const sdLink = r.normalQualityLink || r.hdQualityLink;
-        if (!sdLink) return await socket.sendMessage(sender, { text: '*📛 SD not available*' }, { quoted: msg });
+        if (!sdLink) return await socket.sendMessage(sender, { text: '*❌ SD not available*' }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
         await socket.sendMessage(sender, { video: { url: sdLink }, mimetype: 'video/mp4', caption: `\`360p (SD)\`\n\n${footer}` }, { quoted: msg });
         await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
 
-    } catch (e) { await socket.sendMessage(sender, { text: '*🚩 SD Error*' }, { quoted: msg }); }
+    } catch (e) { await socket.sendMessage(sender, { text: '*❌ SD Error*' }, { quoted: msg }); }
     break;
 }
 case 'fbhd_doc': {
     try {
         const sharp = require('sharp');
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Please provide the URL*' }, { quoted: msg });
 
         const ownerdata = (await axios.get('https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata')).data;
         const { footer } = ownerdata;
 
         const fbRes = await axios.get('https://www.movanest.xyz/v2/fbdown', { params: { url: q } });
-        if (!fbRes.data.status || !fbRes.data.results?.[0]) return await socket.sendMessage(sender, { text: '*📛 HD not available*' }, { quoted: msg });
+        if (!fbRes.data.status || !fbRes.data.results?.[0]) return await socket.sendMessage(sender, { text: '*❌ HD not available*' }, { quoted: msg });
         const r = fbRes.data.results[0];
         const hdLink = r.hdQualityLink || r.normalQualityLink;
-        if (!hdLink) return await socket.sendMessage(sender, { text: '*📛 HD not available*' }, { quoted: msg });
+        if (!hdLink) return await socket.sendMessage(sender, { text: '*❌ HD not available*' }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
         let resizedThumb;
@@ -3178,23 +3178,23 @@ case 'fbhd_doc': {
         }, { quoted: msg });
         await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
 
-    } catch (e) { await socket.sendMessage(sender, { text: '*🚩 HD Doc Error*' }, { quoted: msg }); }
+    } catch (e) { await socket.sendMessage(sender, { text: '*❌ HD Doc Error*' }, { quoted: msg }); }
     break;
 }
 case 'fbsd_doc': {
     try {
         const sharp = require('sharp');
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
 
         const ownerdata = (await axios.get('https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata')).data;
         const { footer } = ownerdata;
 
         const fbRes = await axios.get('https://www.movanest.xyz/v2/fbdown', { params: { url: q } });
-        if (!fbRes.data.status || !fbRes.data.results?.[0]) return await socket.sendMessage(sender, { text: '*📛 SD not available*' }, { quoted: msg });
+        if (!fbRes.data.status || !fbRes.data.results?.[0]) return await socket.sendMessage(sender, { text: '*❌ SD not available*' }, { quoted: msg });
         const r = fbRes.data.results[0];
         const sdLink = r.normalQualityLink || r.hdQualityLink;
-        if (!sdLink) return await socket.sendMessage(sender, { text: '*📛 SD not available*' }, { quoted: msg });
+        if (!sdLink) return await socket.sendMessage(sender, { text: '*❌ SD not available*' }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
         let resizedThumb;
@@ -3210,7 +3210,7 @@ case 'fbsd_doc': {
         }, { quoted: msg });
         await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
 
-    } catch (e) { await socket.sendMessage(sender, { text: '*🚩 SD Doc Error*' }, { quoted: msg }); }
+    } catch (e) { await socket.sendMessage(sender, { text: '*❌ SD Doc Error*' }, { quoted: msg }); }
     break;
 }
 case 'xv':
@@ -3223,7 +3223,7 @@ case 'xvdl': {
         // ✅ Load bot name dynamically
         const sanitized = (number || '').replace(/[^0-9]/g, '');
         let cfg = await loadUserConfigFromMongo(sanitized) || {};
-        let botName = cfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+        let botName = cfg.botName || '★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★';
 
         // ✅ Fake Meta contact message
         const shonux = {
