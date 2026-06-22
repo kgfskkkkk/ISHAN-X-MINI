@@ -2707,7 +2707,7 @@ case 'pp': {
     const q = args.join(' ');
     if (!q) {
       return socket.sendMessage(sender, {
-        text: '❎ Please enter a pastpaper search term!\n\nExample: .pp o/l ict'
+        text: '❎ Please enter a pastpaper search term!\n\nExample: .pp A/L ict'
       }, { quoted: msg });
     }
 
@@ -2913,13 +2913,13 @@ case 'pp': {
         console.log('Sending message to user...');
         await socket.sendMessage(sender, {
             text: formatMessage(
-                '🏏 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 MINI CEICKET NEWS🏏',
+                '🏏 𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 MINI CEICKET NEWS🏏',
                 `📢 *${title}*\n\n` +
                 `🏆 *mark*: ${score}\n` +
                 `🎯 *to win*: ${to_win}\n` +
                 `📈 *now speed*: ${crr}\n\n` +
                 `🌐 *link*: ${link}`,
-                '> 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.2 🥷🇱🇰'
+                '> _𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰_'
             )
         });
         console.log('Message sent successfully.');
@@ -2935,13 +2935,13 @@ case 'pp': {
         
         const response = await fetch('https://api.srihub.store/news/hiru?apikey=dew_BFJBP1gi0pxFIdCasrTqXjeZzcmoSpz4SE4FtG9B');
         if (!response.ok) {
-            throw new Error('API එකෙන් news ගන්න බැරි වුණා.බන් 😩');
+            throw new Error('API එකෙන් news ගන්න බැරි වුණා.බන් API error ❌');
         }
         const data = await response.json();
 
 
         if (!data.status || !data.result || !data.result.title || !data.result.desc || !data.result.link) {
-            throw new Error('API එකෙන් ලැබුණු news data වල ගැටලුවක්');
+            throw new Error('API එකෙන් ලැබුණු news data වල ගැටලුවක් API data error');
         }
 
 
@@ -2972,15 +2972,15 @@ case 'pp': {
         await socket.sendMessage(sender, {
             image: { url: thumbnailUrl },
             caption: formatMessage(
-                '📰 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 නවතම පුවත් 📰',
+                '📰 𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 නවතම පුවත් 📰',
                 `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date || 'තවම ලබාදීලා නැත'}\n🌐 *Link*: ${link}`,
-                '> 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.2 🥷🇱🇰'
+                '> _𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰_'
             )
         });
     } catch (error) {
         console.error(`Error in 'news' case: ${error.message}`);
         await socket.sendMessage(sender, {
-            text: '⚠️ නිව්ස් ගන්න බැරි වුණා සුද්දෝ! 😩 යමක් වැරදුණා වගේ.'
+            text: '⚠️ නිව්ස් ගන්න බැරි වුණා සුද්දෝ! 😩 යමක් වැරදුණා වගේ news error.'
         });
     }
                     break;
