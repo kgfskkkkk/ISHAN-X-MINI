@@ -2431,7 +2431,7 @@ ${error.message}`
         const messages = {
             noCity: "❗ *Please provide a city name!* \n📋 *Usage*: .weather [city name]",
             weather: (data) => `
-* 🍷𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 ᴡᴇᴀᴛʜᴇʀ ʀᴇᴘᴏʀᴛ *
+* 🍷ɪꜱʜᴀɴ-x ᴍᴅ ᴘʀᴏ ᴡᴇᴀᴛʜᴇʀ ʀᴇᴘᴏʀᴛ*
 
 *◈  ${data.name}, ${data.sys.country}  ◈*
 
@@ -2447,7 +2447,7 @@ ${error.message}`
 *┣ 🌎 𝐏ressure :* ${data.main.pressure} hPa
 *╰──────────●●➤*
 
-> *𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰*
+> _*𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*_
 `,
             cityNotFound: "🚫 *City not found!* \n🔍 Please check the spelling and try again.",
             error: "⚠️ *An error occurred!* \n🔄 Please try again later."
@@ -2506,7 +2506,7 @@ case 'aiimg2': {
         // 🔹 Load bot name dynamically
         const sanitized = (number || '').replace(/[^0-9]/g, '');
         let cfg = await loadUserConfigFromMongo(sanitized) || {};
-        let botName = cfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+        let botName = cfg.botName || '★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★';
 
         // 🔹 Fake contact with dynamic bot name
         const shonux = {
