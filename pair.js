@@ -2025,7 +2025,7 @@ case 'checkjid': {
     const responseText = `🔍 *JID INFORMATION*\n\n☘️ *Type:* ${type}\n🆔 *JID:* ${targetJid}\n\n╰──────────────────────`;
 
     await socket.sendMessage(sender, {
-      image: { url: config.RCD_IMAGE_PATH },
+      image: { url: config.IMAGE_PATH },
       caption: responseText
     }, { quoted: msg });
 
@@ -2128,7 +2128,7 @@ case 'gpt': {
     // --- Config & Bot Name ---
     const sanitized = (sender || '').replace(/[^0-9]/g, '');
     let cfg = await loadUserConfigFromMongo(sanitized) || {};
-    let botName = cfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    let botName = cfg.botName || '★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★';
 
     if (!q) {
       await socket.sendMessage(sender, { 
@@ -2152,13 +2152,13 @@ case 'gpt': {
     };
 
     await socket.sendMessage(sender, { react: { text: '🧠', key: msg.key } });
-    await socket.sendMessage(sender, { text: '*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 𝙰𝙸 𝙸𝚜 𝚃𝚑𝚒𝚗𝚔𝚒𝚗𝚐...*', quoted: metaQuote });
+    await socket.sendMessage(sender, { text: '*𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 𝙰𝙸 𝙸𝚜 𝚃𝚑𝚒𝚗𝚔𝚒𝚗𝚐...*', quoted: metaQuote });
 
     // --- System Prompt & API Logic ---
     // API එකට යවන System Prompt එක (බොට්ගේ හැසිරීම)
     const systemPrompt = `
     ඔබ සැබෑ ගැහැනු ලමයෙකු මෙන් හැසිරිය යුතුය. ඉමෝජි පමනක් තිබේනම් ඔබද ඉමෝජි පමනක් යවන්න.
-    ඔයාගේ නම ${botName}. ඔයාගෙන් කවුරුහරි "ඔයාව හැදුවේ කවුද?" හෝ "Who created you?" කියලා ඇහුවොත් පමනක් ඔයා කියන්නේ "මාව හැදුවේ dulina nethmira (DARK TECH ZOON Team)" කියලා.
+    ඔයාගේ නම ${botName}. ඔයාගෙන් කවුරුහරි "ඔයාව හැදුවේ කවුද?" හෝ "Who created you?" කියලා ඇහුවොත් පමනක් ඔයා කියන්නේ "මාව හැදුවේ ishan madusanke (ISHAN-X PRO Team)" කියලා.
     User Question: ${q}`;
 
     // Free GPT-4 API (GuruAPI)
@@ -2176,11 +2176,11 @@ case 'gpt': {
 
     // --- Final Message with Style ---
     await socket.sendMessage(sender, {
-      text: `𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 𝐀𝐈 𝐂𝐇𝐀𝐓* 🧠\n\n${aiReply}\n\n`,
+      text: `𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 𝐀𝐈 𝐂𝐇𝐀𝐓* 🧠\n\n${aiReply}\n\n`,
       footer: `🤖 ${botName}`,
       buttons: [
         { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📄 𝐌𝐀𝐈𝙽 𝐌𝐄𝐍𝐔' }, type: 1 },
-        { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: '📡 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎' }, type: 1 }
+        { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: '📁 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎' }, type: 1 }
       ],
       headerType: 1,
       quoted: metaQuote
@@ -2189,7 +2189,7 @@ case 'gpt': {
   } catch (err) {
     console.error("Error in AI chat:", err);
     await socket.sendMessage(sender, { 
-      text: '*𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 𝙰𝙿𝙸 𝙴𝚛𝚛𝚘𝚛 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗 𝙻𝚊𝚝𝚎𝚛 !*',
+      text: '*𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 𝙰𝙿𝙸 𝙴𝚛𝚛𝚘𝚛 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗 𝙻𝚊𝚝𝚎𝚛 !*',
       buttons: [
         { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📄 𝐌𝐀𝐈𝙽 𝐌𝐄𝐍𝐔' }, type: 1 }
       ]
