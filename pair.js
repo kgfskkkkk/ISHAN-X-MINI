@@ -2338,7 +2338,7 @@ case 'upload': {
         };
 
         // --- NEW BUTTON RESPONSE CODE ---
-        const botLogo = 'https://files.catbox.moe/lab4hw.jpeg'; // REPLACE WITH YOUR LOGO URL
+        const botLogo = 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000005eac720896d40b719700b3c0.png'; // REPLACE WITH YOUR LOGO URL
 
         // Construct Interactive Message with Buttons
         const { proto, generateWAMessageFromContent } = require('@dnuzi/baileys');
@@ -2349,26 +2349,26 @@ case 'upload': {
                     interactiveMessage: {
                         body: {
                             text: `
-╭━━❮ *𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰* ❯━━╮
+╭━━❮ *★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★* ❯━━╮
 ╠⦁ 📁 *Type:* ${mediaType}
 ╠⦁ 📦 *Size:* ${formatBytes(mediaBuffer.length)}
 ╠⦁ 🔗 *URL:* ${mediaUrl}
 ╠⦁
 ╰━━━━━━━━━━━━━━━━━━━━━━⪼
 
-> *〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰*`
+> _*𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*`
                         },
                         footer: {
-                            text: "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰"
+                            text: "𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊"
                         },
                         header: {
                             title: "Media Uploaded Successfully",
-                            subtitle: "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰",
+                            subtitle: "𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊",
                             hasMediaAttachment: false
                         },
                         contextInfo: {
                             externalAdReply: {
-                                title: "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰",
+                                title: "𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊",
                                 body: "Click buttons below to copy or open",
                                 thumbnailUrl: botLogo,
                                 sourceUrl: mediaUrl,
