@@ -4730,8 +4730,8 @@ case 'download': {
     
     // 1. GENERATE RANDOM LOGO (Add your URLs here)
     const logos = [
-        "https://files.catbox.moe/qb2puf.jpeg", 
-        "https://files.catbox.moe/qb2puf.jpeg",
+        "https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/78bgy.jpg", 
+        "https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/78bgy.jpg",
         config.LOGO // Fallback to config logo
     ];
     const randomLogo = logos[Math.floor(Math.random() * logos.length)] || logos[0];
@@ -4785,7 +4785,7 @@ END:VCARD`
     await socket.sendMessage(sender, {
       image: { url: randomLogo }, // Main Logo
       caption: text,
-      footer: "〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰",
+      footer: "𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰",
       buttons: buttons,
       contextInfo: {
         externalAdReply: {
@@ -4814,10 +4814,10 @@ case 'creative': {
   try {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★';
     
     // Random Logo Logic
-    const logos = [config.LOGO, "https://files.catbox.moe/qb2puf.jpeg"]; // Add more
+    const logos = [config.LOGO, "https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/UhDXf.jpg"]; // Add more
     const randomLogo = logos[Math.floor(Math.random() * logos.length)] || logos[0];
 
     const shonux = {
@@ -4886,7 +4886,7 @@ END:VCARD`
           title: "🎨 𝐂𝐑𝐄𝐀𝐓𝐈𝐕𝐄 𝐌𝐎𝐃𝐄",
           body: title,
           thumbnailUrl: randomLogo,
-          sourceUrl: "https://whatsapp.com/channel/0029VbC3JfG77qVXz1CbJM3l",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAe6Nt545uv1kaCDE3j",
           mediaType: 1,
           renderLargerThumbnail: true
         }
@@ -4908,10 +4908,10 @@ case 'system': {
   try {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★';
     
     // Random Logo Logic
-    const logos = [config.LOGO, "https://files.catbox.moe/qb2puf.jpeg"]; 
+    const logos = [config.LOGO, "https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/93UPO.jpg"]; 
     const randomLogo = logos[Math.floor(Math.random() * logos.length)] || logos[0];
 
     const shonux = {
@@ -5001,7 +5001,7 @@ END:VCARD`
           title: "⚙️ 𝐒𝐘𝐒𝐓𝐄𝐌 𝐂𝐎𝐍𝐓𝐑𝐎𝐋",
           body: title,
           thumbnailUrl: randomLogo,
-          sourceUrl: "https://whatsapp.com/channel/0029VbC3JfG77qVXz1CbJM3l",
+          sourceUrl: "https://whatsapp.com/channel/0029VbAe6Nt545uv1kaCDE3j",
           mediaType: 1,
           renderLargerThumbnail: true
         }
