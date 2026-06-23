@@ -4277,7 +4277,7 @@ case 'system': {
       'https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata'
     )).data;
 
-    const { footer, imageurl, version, botname, ownername, ownernumber, platform } = ownerdata;
+    const { footer, imageurl13, version, botname, ownername, ownernumber, platform } = ownerdata;
 
     const systemMessage = `
 *╭──『 SYSTEM INFO 』─◉◉➤*
@@ -4294,7 +4294,7 @@ case 'system': {
 ${footer}`;
 
     await socket.sendMessage(sender, {
-      image: { url: imageurl },
+      image: { url: imageurl13 },
       caption: systemMessage,
       contextInfo: {
         forwardingScore: 999,
