@@ -1231,7 +1231,7 @@ case 'down_1080': {
             caption: `🎬 *${json.title}*\n\n\`${json.download.label}\`\n\n${footer}`
         }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) {
         console.error('Video DL Error:', e);
@@ -1315,7 +1315,7 @@ case 'down_1080d': {
             caption: `🎬 *${json.title}*\n\n\`${json.download.label}\`\n\n${footer}`
         }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) {
         console.error('Video Doc DL Error:', e);
@@ -4078,6 +4078,7 @@ END:VCARD`
 case 'song':
 case 'play':
 case 'audio':
+case 'mp3':
 case 'ytmp3': {
     try {
         const yts = require('ytsearch-venom');
@@ -4280,14 +4281,14 @@ case 'system': {
 
     const systemMessage = `
 *╭──『 SYSTEM INFO 』─◉◉➤*
-*│ 📌 \`CREATOR\` : -* ${ownername}
-*│ 📞 \`Hotline\` : -* ${ownernumber}
-*│ 📅 \`Date\` : -* ${date}
-*│ ⌚ \`Time\` : -* ${time}
-*│ 🕒 \`Uptime\` : -* ${rtime}
-*│ 💾 \`RAM Usage\` : -* ${ram}
-*│ 🖥️ \`Platform\` : -* ${platform}
-*│ 🧬 \`Version\` : -* ${version}
+*│ 📌 \`CREATOR\` : -* *${ownername}*
+*│ 📞 \`Hotline\` : -* *${ownernumber}*
+*│ 📅 \`Date\` : -* *${date}*
+*│ ⌚ \`Time\` : -* *${time}*
+*│ 🕒 \`Uptime\` : -* *${rtime}*
+*│ 💾 \`RAM Usage\` : -* *${ram}*
+*│ 🖥️ \`Platform\` : -* *${platform}*
+*│ 🧬 \`Version\` : -* *${version}*
 *╰──────────────◉◉➤*
 
 ${footer}`;
@@ -4308,7 +4309,7 @@ ${footer}`;
 
   } catch (e) {
     console.error('system error', e);
-    await socket.sendMessage(sender, { text: `*🚩 System Error :-*\n${e.message}` }, { quoted: msg });
+    await socket.sendMessage(sender, { text: `*❌ System Error :-*\n${e.message}` }, { quoted: msg });
   }
   break;
 }
