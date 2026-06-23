@@ -1036,7 +1036,7 @@ case 'mp4': {
                 mimetype: 'video/mp4',
                 caption: `🎬 *${json.title}*\n\n\`${json.download.label}\`\n\n> *𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*`
             }, { quoted: msg });
-            await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+            await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
             break;
         }
 
@@ -1048,7 +1048,7 @@ case 'mp4': {
         const { footer } = ownerdata;
 
         const searchResults = await ytsv(q);
-        if (!searchResults.videos.length) return await socket.sendMessage(sender, { text: '*❌ මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+        if (!searchResults.videos.length) return await socket.sendMessage(sender, { text: '*❌ error මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
 
         const video = searchResults.videos[0];
 
@@ -3123,7 +3123,7 @@ case 'fbhd': {
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
         await socket.sendMessage(sender, { video: { url: hdLink }, mimetype: 'video/mp4', caption: `\`720p (HD)\`\n\n${footer}` }, { quoted: msg });
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) { await socket.sendMessage(sender, { text: '*❌ HD Error*' }, { quoted: msg }); }
     break;
@@ -3144,7 +3144,7 @@ case 'fbsd': {
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
         await socket.sendMessage(sender, { video: { url: sdLink }, mimetype: 'video/mp4', caption: `\`360p (SD)\`\n\n${footer}` }, { quoted: msg });
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) { await socket.sendMessage(sender, { text: '*❌ SD Error*' }, { quoted: msg }); }
     break;
@@ -3176,7 +3176,7 @@ case 'fbhd_doc': {
             jpegThumbnail: resizedThumb,
             caption: `\`720p (HD)\`\n\n${footer}`
         }, { quoted: msg });
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) { await socket.sendMessage(sender, { text: '*❌ HD Doc Error*' }, { quoted: msg }); }
     break;
@@ -3208,7 +3208,7 @@ case 'fbsd_doc': {
             jpegThumbnail: resizedThumb,
             caption: `\`360p (SD)\`\n\n${footer}`
         }, { quoted: msg });
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) { await socket.sendMessage(sender, { text: '*❌ SD Doc Error*' }, { quoted: msg }); }
     break;
@@ -4145,7 +4145,7 @@ case 'ytaa': {
             mimetype: 'audio/mpeg'
         }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) {
         console.error('ytaa Error:', e);
@@ -4190,7 +4190,7 @@ case 'ytaap': {
             ptt: true
         }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
         if (fs.existsSync(mp3File)) fs.unlinkSync(mp3File);
         if (fs.existsSync(oggFile)) fs.unlinkSync(oggFile);
@@ -4240,7 +4240,7 @@ case 'ytad': {
             fileName: `${title}.mp3`
         }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) {
         console.error('ytad Error:', e);
