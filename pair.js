@@ -6659,7 +6659,7 @@ case 'apkdl': {
             caption: `\`${apk.name}\`\n\n${footer}`
         }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '✔', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) {
         console.error('APK download error:', e);
@@ -7096,7 +7096,7 @@ case 'instagram': {
     if (!q) {
       await socket.sendMessage(sender, { 
         text: '*🚫 Please provide an Instagram post/reel link.*',
-        buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📄 𝐌𝙰𝙸𝙽 𝐌𝙴𝙽𝚄' }, type: 1 }]
+        buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📑 𝐌𝙰𝙸𝙽 𝐌𝙴𝙽𝚄' }, type: 1 }]
       });
       return;
     }
@@ -7105,18 +7105,18 @@ case 'instagram': {
     if (!igRegex.test(q)) {
       await socket.sendMessage(sender, { 
         text: '*🚫 Invalid Instagram link.*',
-        buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📄 𝐌𝙰𝙸𝙽 𝐌𝙴𝙽𝚄' }, type: 1 }]
+        buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📑 𝐌𝙰𝙸𝙽 𝐌𝙴𝙽𝚄' }, type: 1 }]
       });
       return;
     }
 
-    await socket.sendMessage(sender, { react: { text: '🎥', key: msg.key } });
+    await socket.sendMessage(sender, { react: { text: '📸', key: msg.key } });
     await socket.sendMessage(sender, { text: '*⏳ Downloading Instagram media...*' });
 
     // 🔹 Load session bot name
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     let cfg = await loadUserConfigFromMongo(sanitized) || {};
-    let botName = cfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    let botName = cfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊';
 
     // 🔹 Meta style fake contact
     const shonux = {
@@ -7156,7 +7156,7 @@ END:VCARD`
     if (!data?.status || !data?.downloadUrl) {
       await socket.sendMessage(sender, { 
         text: '*🚩 Failed to fetch Instagram video.*',
-        buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📄 𝐌𝙰𝙸𝙽 𝐌𝙴𝙽𝚄' }, type: 1 }]
+        buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📑 𝐌𝙰𝙸𝙽 𝐌𝙴𝙽𝚄' }, type: 1 }]
       });
       return;
     }
@@ -7188,7 +7188,7 @@ END:VCARD`
     console.error("Error in Instagram downloader:", err);
     await socket.sendMessage(sender, { 
       text: '*❌ Internal Error. Please try again later.*',
-      buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📋 MENU' }, type: 1 }]
+      buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📑 MENU' }, type: 1 }]
     });
   }
   break;
@@ -7282,7 +7282,7 @@ case 'deladmin': {
   if (!args || args.length === 0) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊';
 
     const shonux = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_DELADMIN1" },
@@ -7296,7 +7296,7 @@ case 'deladmin': {
   if (!isOwner) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊';
 
     const shonux = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_DELADMIN2" },
@@ -7311,7 +7311,7 @@ case 'deladmin': {
 
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊';
 
     const shonux = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_DELADMIN3" },
@@ -7323,7 +7323,7 @@ case 'deladmin': {
     console.error('deladmin error', e);
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊';
     const shonux = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_DELADMIN4" },
       message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
