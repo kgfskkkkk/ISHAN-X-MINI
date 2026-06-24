@@ -3828,7 +3828,7 @@ case 'bots': {
         console.warn("MongoDB Config Load Failed:", err);
     }
 
-    const botName = "★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★";
+    const botName = "𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎";
     const defaultLogo = "https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000005eac720896d40b719700b3c0.png";
     const configLogo = cfg.logo || (typeof config !== 'undefined' ? config.RCD_IMAGE_PATH : null);
 
@@ -5235,13 +5235,6 @@ case 'ashiya': {
         buttonParamsJson: JSON.stringify({
           display_text: "📋 Copy Owner Number",
           copy_code: ownerNumber
-        })
-      },
-      {
-        name: "quick_reply",
-        buttonParamsJson: JSON.stringify({
-          display_text: "🔙 Main Menu",
-          id: `${config.PREFIX || '.'}menu`
         })
       }
     ];
