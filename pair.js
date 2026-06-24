@@ -5825,7 +5825,7 @@ case 'tiktokdl': {
             caption: caption,
             footer: footer,
             buttons: [{
-                buttonText: '𝐒𝐄𝐋𝐄𝐂𝐓 𝐐𝐔𝐀𝐋𝐈𝐓𝐘',
+                buttonText: '𝐒𝐄𝐋𝐄𝐂𝐓 𝐅𝐎𝐑𝐌𝐀𝐓',
                 sections: [
                     {
                         title: '🎥 Video Format',
@@ -5845,7 +5845,7 @@ case 'tiktokdl': {
                         title: '🎵 Audio Format',
                         rows: [
                             { header: 'AUDIO', title: '🎧 Audio File', description: 'Audio file download', id: `${prefix}ttdl3 ${q}` },
-                            { header: 'PTT', title: '🎤 Voice Note', description: 'Voice note download', id: `${prefix}ttdl3d ${q}` }
+                            { header: 'VOICE', title: '🎤 Voice Note', description: 'Voice note download', id: `${prefix}ttdl3d ${q}` }
                         ]
                     }
                 ]
