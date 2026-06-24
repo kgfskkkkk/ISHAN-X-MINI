@@ -5006,8 +5006,8 @@ case 'dp': {
         // (Assuming you have a function to get config, otherwise defaults use hardcoded values)
         const sanitizedSender = sender.split('@')[0];
         const cfg = await loadUserConfigFromMongo(sanitizedSender).catch(() => ({})) || {};
-        const botName = cfg.botName || "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰"; // Default Artful Name
-        const logo = cfg.logo || "https://files.catbox.moe/qb2puf.jpeg"; // Default Logo
+        const botName = cfg.botName || "𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰"; // Default Artful Name
+        const logo = cfg.logo || "https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000005eac720896d40b719700b3c0.png"; // Default Logo
         
         // --- TARGET RESOLUTION (The "Bind" Logic) ---
         let targetUser = sender; // Default to self
@@ -5050,7 +5050,7 @@ case 'dp': {
 ╚════════════❒
 
 
-   *අඩන්න එපා හලිද profile එක විතරයිනේ ගත්තේ මන් අල ගේනත් දෙන්නම්කො සුදු හලිද 🥺💗*
+   *වැඩිය හිතන්න එපා profile එක ගත්තේ අවුලක් නෑ නේද? 🥺💗*
 `;
 
         // --- META BROADCAST QUOTE (Style) ---
@@ -5059,7 +5059,7 @@ case 'dp': {
                 remoteJid: "status@broadcast", 
                 participant: "0@s.whatsapp.net", 
                 fromMe: false, 
-                id: "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰" 
+                id: "𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰" 
             },
             message: { 
                 contactMessage: { 
@@ -5725,7 +5725,7 @@ case 'generalhelpen': {
   if (!jid) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰';
 
     const shonux = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_UNFOLLOW" },
@@ -5742,7 +5742,7 @@ case 'generalhelpen': {
   if (!(isOwner || isAdmin)) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰';
     const shonux = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_UNFOLLOW2" },
         message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -5753,7 +5753,7 @@ case 'generalhelpen': {
   if (!jid.endsWith('@newsletter')) {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰';
     const shonux = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_UNFOLLOW3" },
         message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -5769,7 +5769,7 @@ case 'generalhelpen': {
 
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰';
     const shonux = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_UNFOLLOW4" },
         message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -5780,7 +5780,7 @@ case 'generalhelpen': {
     console.error('unfollow error', e);
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰';
     const shonux = {
         key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_UNFOLLOW5" },
         message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
