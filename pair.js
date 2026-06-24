@@ -5174,8 +5174,9 @@ case 'resetconfig': {
 }
 
 case 'owner':
-case 'ayesh':
-case 'ashiya': {
+case 'ishan':
+case 'ishan-x':
+case 'Developer': {
   try {
     // 1. Send Royal Reaction 👑
     await socket.sendMessage(sender, { 
@@ -5183,11 +5184,11 @@ case 'ashiya': {
     });
 
     // 2. Configuration & Data
-    const ownerNumber = '94752135878';
-    const ownerName = '𝐀ʏᴇꜱʜ 𝐓ʜᴇᴍɪʏᴀ 🥷🇱🇰';
-    const botName = '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
-    const ownerImage = 'https://files.catbox.moe/qb2puf.jpeg';
-    const websiteUrl = 'https://ayesh-ofc-site.vercel.app/';
+    const ownerNumber = '94778761926';
+    const ownerName = '𝐈𝚂𝙷𝙰𝙽 𝐌𝙰𝙳𝚄𝚂𝙰𝙽𝙺𝙴 🧑‍💻🇱🇰';
+    const botName = '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 🧑‍💻🇱🇰';
+    const ownerImage = 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/RKhKV.jpg';
+    const websiteUrl = 'https://github.com';
     
     // Time Calculation
     const timeNow = new Date().toLocaleTimeString('en-US', { 
@@ -5197,20 +5198,20 @@ case 'ashiya': {
     // 3. Artful "Royal" Text Layout 🎨
     // Using box-drawing characters and emojis for a "colorful" feel
     const aestheticCaption = `
-╔════〔 🥷 *${botName}* 〕═══❒
-╠⦁ 👤 *OWNER PROFILE*
+╔════〔 *${botName}* 〕═══❒
+╠⦁ 🧑‍💻 *OWNER PROFILE*
 ╠⦁ 🙌 𝐍𝐚𝐦𝐞 : *${ownerName}*
-╠⦁ 🍷 𝐑𝐨𝐥𝐞 : Lead Developer
-╠⦁ 📍 𝐅𝐫𝐨𝐦 : Sri Lanka 🇱🇰
-╠⦁ ⌚ 𝐓𝐢𝐦𝐞 : ${timeNow}
+╠⦁ 🍷 𝐑𝐨𝐥𝐞 : *Lead Developer*
+╠⦁ 📍 𝐅𝐫𝐨𝐦 : *Sri Lanka 🇱🇰*
+╠⦁ ⌚ 𝐓𝐢𝐦𝐞 : *${timeNow}*
 ╠⦁ 🛠️ *SKILLS & STATUS*
-╠⦁ 💻 Stack : JS, Node.js, React
+╠⦁ 💻 Stack : *JS, Node.js, React*
 ╠⦁ 🤖 Bot : *Active & Online* ✅
-╠⦁ 🛡️ Security : Verified
+╠⦁ 🛡️ Security : *Verified*
 ╚════════════════❒
 
 
-> *〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰*
+> *𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*
 `.trim();
 
     // 4. Define the Interactive Button System (Native Flow) [web:1]
@@ -5220,7 +5221,7 @@ case 'ashiya': {
         name: "cta_url",
         buttonParamsJson: JSON.stringify({
           display_text: "💬 Chat with Owner",
-          url: `https://wa.me/${ownerNumber}?text=Hello ${ownerName}, I need assistance with 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Bot.`
+          url: `https://wa.me/${ownerNumber}?text=Hello ${ownerName}, I need assistance with 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Bot.`
         })
       },
       {
@@ -5260,7 +5261,7 @@ case 'ashiya': {
             footer: { text: "Tap a button below to interact 👇" },
             header: {
               title: "",
-              subtitle: "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Support",
+              subtitle: "𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Support",
               hasMediaAttachment: true,
               imageMessage: mediaMessage.imageMessage
             },
@@ -5280,9 +5281,9 @@ case 'ashiya': {
     // Small delay to ensure order
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    const vcard1 = `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName}\nORG:DTZ Development\nTEL;type=CELL;type=VOICE;waid=947746793356:+947746793356\nEND:VCARD`;
-    const vcard2 = `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName} (2)\nORG:DTZ Development\nTEL;type=CELL;type=VOICE;waid=94785457011:+94785457011\nEND:VCARD`;
-    const vcard3 = `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName} (3)\nORG:DTZ Development\nTEL;type=CELL;type=VOICE;waid=94781332957:+94781332957\nEND:VCARD`;
+    const vcard1 = `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName}\nORG:ISHAN-X Development\nTEL;type=CELL;type=VOICE;waid=94778761926:+947746793356\nEND:VCARD`;
+    const vcard2 = `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName} (2)\nORG:ISHAN-X Development\nTEL;type=CELL;type=VOICE;waid=94785457011:+94785457011\nEND:VCARD`;
+    const vcard3 = `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName} (3)\nORG:ISHAN-X Development\nTEL;type=CELL;type=VOICE;waid=94774258452:+94781332957\nEND:VCARD`;
     await socket.sendMessage(sender, {
       contacts: {
         displayName: ownerName,
