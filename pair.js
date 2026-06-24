@@ -5180,7 +5180,7 @@ case 'Developer': {
   try {
     // 1. Send Royal Reaction 👑
     await socket.sendMessage(sender, { 
-      react: { text: "🥷", key: msg.key } 
+      react: { text: "🧑‍💻", key: msg.key } 
     });
 
     // 2. Configuration & Data
@@ -5390,7 +5390,7 @@ END:VCARD` } }
         const buttonMessage = {
             image: { url: randomImage },
             caption: `🖼️ *𝐈mage 𝐒earch:* ${q}\n\n*𝐏rovided 𝐁y ${botName}*`,
-            footer: config.FOOTER || '> *〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.3 🥷🇱🇰*',
+            footer: config.FOOTER || '> *𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*',
             buttons: buttons,
              headerType: 4,
             contextInfo: { mentionedJid: [sender] }
