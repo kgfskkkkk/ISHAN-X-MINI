@@ -5006,7 +5006,7 @@ case 'dp': {
         // (Assuming you have a function to get config, otherwise defaults use hardcoded values)
         const sanitizedSender = sender.split('@')[0];
         const cfg = await loadUserConfigFromMongo(sanitizedSender).catch(() => ({})) || {};
-        const botName = cfg.botName || "𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰"; // Default Artful Name
+        const botName = cfg.botName || "𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻"; // Default Artful Name
         const logo = cfg.logo || "https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000005eac720896d40b719700b3c0.png"; // Default Logo
         
         // --- TARGET RESOLUTION (The "Bind" Logic) ---
@@ -6137,7 +6137,7 @@ case 'grouplist': {
 
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     const cfg = await loadUserConfigFromMongo(sanitized) || {};
-    const botName = cfg.botName || BOT_NAME_FANCY || "𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰";
+    const botName = cfg.botName || BOT_NAME_FANCY || "𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊";
 
     // ✅ Pagination setup — 10 groups per message
     const groupsPerPage = 10;
@@ -6161,7 +6161,7 @@ case 'grouplist': {
 
       await socket.sendMessage(sender, {
         text: textMsg,
-        footer: `〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰*`
+        footer: `𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*`
       });
 
       // Add short delay to avoid spam
@@ -6360,7 +6360,7 @@ case 'savecontacts': {
       document: fs.readFileSync(filePath),
       mimetype: 'text/vcard',
       fileName: `contacts-${safeSubject}.vcf`,
-      caption: `✅ *Contacts Exported Successfully!*\n👥 Group: *${subject}*\n📇 Total Contacts: *${participants.length}*\n\n> *〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰*`
+      caption: `✅ *Contacts Exported Successfully!*\n👥 Group: *${subject}*\n📇 Total Contacts: *${participants.length}*\n\n> *𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*`
     }, { quoted: msg });
 
     // ✅ Cleanup temp file
@@ -6385,7 +6385,7 @@ case 'font': {
     // ?? Load bot name dynamically
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     let cfg = await loadUserConfigFromMongo(sanitized) || {};
-    let botName = cfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    let botName = cfg.botName || '𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰';
 
     // 🔹 Fake contact for Meta AI mention
     const botMention = {
@@ -6419,7 +6419,7 @@ END:VCARD`
 
     if (!text) {
         return await socket.sendMessage(sender, {
-            text: `❎ *Please provide text to convert into fancy fonts.*\n\n📌 *Example:* \`.font yasas\``
+            text: `❎ *Please provide text to convert into fancy fonts.*\n\n📌 *Example:* \`.font ishan\``
         }, { quoted: botMention });
     }
 
@@ -6463,7 +6463,7 @@ case 'mfdl': {
         // ✅ Load bot name dynamically
         const sanitized = (number || '').replace(/[^0-9]/g, '');
         let cfg = await loadUserConfigFromMongo(sanitized) || {};
-        let botName = cfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+        let botName = cfg.botName || '★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★';
 
         // ✅ Fake Meta contact message (like Facebook style)
         const shonux = {
@@ -6533,7 +6533,7 @@ END:VCARD`
         // ✅ In catch also send Meta mention style
         const sanitized = (number || '').replace(/[^0-9]/g, '');
         let cfg = await loadUserConfigFromMongo(sanitized) || {};
-        let botName = cfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+        let botName = cfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊';
 
         const shonux = {
             key: {
@@ -6562,13 +6562,15 @@ END:VCARD`
 }
 // ─────────────── APK DOWNLOADER (Aptoide) ───────────────
 case 'apk':
+case 'app':
+case 'apps':
 case 'apksearch':
 case 'apks': {
     try {
         const q = args.join(' ').trim();
         if (!q) {
             return await socket.sendMessage(sender, {
-                text: `*📛 කරුණාකර app නමක් දෙන්න*\n\nExample: *${config.PREFIX}apk whatsapp*`
+                text: `*❌ Provide a URL or a keyword කරුණාකර app නමක් දෙන්න*\n\nExample: *${config.PREFIX}apk whatsapp*`
             }, { quoted: msg });
         }
 
@@ -6584,7 +6586,7 @@ case 'apks': {
         const data = response.data;
 
         if (!data.datalist || !data.datalist.list || data.datalist.list.length === 0) {
-            return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+            return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         }
 
         const apk = data.datalist.list[0];
@@ -6614,7 +6616,7 @@ case 'apks': {
 
     } catch (e) {
         console.error('APK search error:', e);
-        await socket.sendMessage(sender, { text: `*📛 APK Error : -* ${e.message || e}` }, { quoted: msg });
+        await socket.sendMessage(sender, { text: `*❌ APK Error : -* ${e.message || e}` }, { quoted: msg });
     }
     break;
 }
@@ -6623,7 +6625,7 @@ case 'apkdl': {
     try {
         const q = args.join(' ').trim();
         if (!q) {
-            return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+            return await socket.sendMessage(sender, { text: '*❌ Provide a URL or a keyword කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
         }
 
         const ownerdata = (await axios.get(
@@ -6636,7 +6638,7 @@ case 'apkdl': {
         const data = response.data;
 
         if (!data.datalist || !data.datalist.list || data.datalist.list.length === 0) {
-            return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+            return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         }
 
         const apk = data.datalist.list[0];
@@ -6670,7 +6672,7 @@ case 'apkdtl': {
     try {
         const q = args.join(' ').trim();
         if (!q) {
-            return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+            return await socket.sendMessage(sender, { text: '*❌ Provide a URL or a keyword කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
         }
 
         const ownerdata = (await axios.get(
@@ -6683,7 +6685,7 @@ case 'apkdtl': {
         const data = response.data;
 
         if (!data.datalist || !data.datalist.list || data.datalist.list.length === 0) {
-            return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+            return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         }
 
         const apk = data.datalist.list[0];
@@ -6703,7 +6705,7 @@ case 'apkdtl': {
                 `${footer}`
         }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '✔', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) {
         console.error('APK details error:', e);
