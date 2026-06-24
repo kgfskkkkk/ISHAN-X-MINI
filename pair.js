@@ -4995,7 +4995,7 @@ END:VCARD`
 
 //-------------------- UNIFIED PROFILE PICTURE COMMAND --------------------//
 case 'getpp':
-case 'pp':
+case 'profile':
 case 'getdp':
 case 'dp': {
     // 1. React with loading
@@ -5795,7 +5795,7 @@ case 'tt':
 case 'tiktokdl': {
     try {
         const q = args.join(' ').trim();
-        if (!q || !q.includes('tiktok')) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර tiktok url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q || !q.includes('tiktok')) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර tiktok url එකක් ලබා දෙන්න Provide a URL*' }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '🎩', key: msg.key } });
 
@@ -5807,13 +5807,13 @@ case 'tiktokdl': {
         // Fetch TikTok data
         const ttRes = await axios.get('https://www.movanest.xyz/v2/tiktok', { params: { url: q } });
         if (!ttRes.data.status || !ttRes.data.results) {
-            return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+            return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         }
         const mov = ttRes.data.results;
 
         const caption =
             `*┎━━━━━━━━━━━━━━━━❖●►*\n` +
-            `*┃➤ 🎵 Title    :* ${mov.desc || 'TikTok Video'}\n` +
+            `*┃➤ 🎬 Title    :* ${mov.desc || 'TikTok Video'}\n` +
             `*┃➤ 🌍 Author   :* ${mov.author_nickname || 'Unknown'}\n` +
             `*┃➤ 🔗 Link     :* ${q}\n` +
             `*┗━━━━━━━━━━━━━━━━❖●►*`;
@@ -5825,26 +5825,26 @@ case 'tiktokdl': {
             caption: caption,
             footer: footer,
             buttons: [{
-                buttonText: 'Download Format ❏',
+                buttonText: '𝐒𝐄𝐋𝐄𝐂𝐓 𝐐𝐔𝐀𝐋𝐈𝐓𝐘',
                 sections: [
                     {
                         title: '🎥 Video Format',
                         rows: [
-                            { header: 'No WM', title: '📼 Video No Watermark', description: 'Video without watermark', id: `${prefix}ttdl1 ${q}` },
-                            { header: 'WM', title: '📼 Video Watermark', description: 'Video with watermark', id: `${prefix}ttdl2 ${q}` }
+                            { header: 'No WATERMARK', title: '📼 Video No Watermark', description: 'Video without watermark', id: `${prefix}ttdl1 ${q}` },
+                            { header: 'WITH WATERMARK', title: '📼 Video Watermark', description: 'Video with watermark', id: `${prefix}ttdl2 ${q}` }
                         ]
                     },
                     {
                         title: '📂 Document Format',
                         rows: [
-                            { header: 'No WM Doc', title: '📂 Video No Watermark', description: 'Document without watermark', id: `${prefix}ttdl1d ${q}` },
-                            { header: 'WM Doc', title: '📂 Video Watermark', description: 'Document with watermark', id: `${prefix}ttdl2d ${q}` }
+                            { header: 'No WATERMARK DOCUMENT', title: '📂 Video No Watermark', description: 'Document without watermark', id: `${prefix}ttdl1d ${q}` },
+                            { header: 'WITH WATERMARK DOCUMENT', title: '📂 Video Watermark', description: 'Document with watermark', id: `${prefix}ttdl2d ${q}` }
                         ]
                     },
                     {
                         title: '🎵 Audio Format',
                         rows: [
-                            { header: 'Audio', title: '🎧 Audio File', description: 'Audio file download', id: `${prefix}ttdl3 ${q}` },
+                            { header: 'AUDIO', title: '🎧 Audio File', description: 'Audio file download', id: `${prefix}ttdl3 ${q}` },
                             { header: 'PTT', title: '🎤 Voice Note', description: 'Voice note download', id: `${prefix}ttdl3d ${q}` }
                         ]
                     }
@@ -5854,78 +5854,78 @@ case 'tiktokdl': {
 
     } catch (e) {
         console.error('TikTok Error:', e);
-        await socket.sendMessage(sender, { text: '*🚩 TikTok Error*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*❌ TikTok Error*' }, { quoted: msg });
     }
     break;
 }
 case 'ttdl1': {
     try {
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Provide a URL*' }, { quoted: msg });
 
         const ownerdata = (await axios.get('https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata')).data;
         const { footer } = ownerdata;
 
         const ttRes = await axios.get('https://www.movanest.xyz/v2/tiktok', { params: { url: q } });
-        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         const mov = ttRes.data.results;
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
         await socket.sendMessage(sender, { video: { url: mov.no_watermark }, mimetype: 'video/mp4', caption: `📼 \`Video No Watermark\`\n\n${footer}` }, { quoted: msg });
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
-    } catch (e) { await socket.sendMessage(sender, { text: '*🚩 TikTok DL Error*' }, { quoted: msg }); }
+    } catch (e) { await socket.sendMessage(sender, { text: '*❌ TikTok DDOWNLOAD ERROR*' }, { quoted: msg }); }
     break;
 }
 case 'ttdl2': {
     try {
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Provide a URL*' }, { quoted: msg });
 
         const ownerdata = (await axios.get('https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata')).data;
         const { footer } = ownerdata;
 
         const ttRes = await axios.get('https://www.movanest.xyz/v2/tiktok', { params: { url: q } });
-        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         const mov = ttRes.data.results;
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
         await socket.sendMessage(sender, { video: { url: mov.watermark }, mimetype: 'video/mp4', caption: `📼 \`Video Watermark\`\n\n${footer}` }, { quoted: msg });
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
-    } catch (e) { await socket.sendMessage(sender, { text: '*🚩 TikTok DL Error*' }, { quoted: msg }); }
+    } catch (e) { await socket.sendMessage(sender, { text: '*❌ TikTok DOWNLOAD ERROR*' }, { quoted: msg }); }
     break;
 }
 case 'ttdl3': {
     try {
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Provide a URL*' }, { quoted: msg });
 
         const ownerdata = (await axios.get('https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata')).data;
         const { footer } = ownerdata;
 
         const ttRes = await axios.get('https://www.movanest.xyz/v2/tiktok', { params: { url: q } });
-        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         const mov = ttRes.data.results;
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
         await socket.sendMessage(sender, { audio: { url: mov.music }, mimetype: 'audio/mpeg' }, { quoted: msg });
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
-    } catch (e) { await socket.sendMessage(sender, { text: '*🚩 TikTok Audio Error*' }, { quoted: msg }); }
+    } catch (e) { await socket.sendMessage(sender, { text: '*❌ TikTok AUDIO ERROR*' }, { quoted: msg }); }
     break;
 }
 case 'ttdl1d': {
     try {
         const sharp = require('sharp');
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Provide a URL*' }, { quoted: msg });
 
         const ownerdata = (await axios.get('https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata')).data;
         const { footer } = ownerdata;
 
         const ttRes = await axios.get('https://www.movanest.xyz/v2/tiktok', { params: { url: q } });
-        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         const mov = ttRes.data.results;
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
@@ -5940,22 +5940,22 @@ case 'ttdl1d': {
             jpegThumbnail: resizedThumb,
             caption: `📼 \`Video No Watermark\`\n\n${footer}`
         }, { quoted: msg });
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
-    } catch (e) { await socket.sendMessage(sender, { text: '*🚩 TikTok Doc Error*' }, { quoted: msg }); }
+    } catch (e) { await socket.sendMessage(sender, { text: '*❌ TikTok DOCUMENT ERROR*' }, { quoted: msg }); }
     break;
 }
 case 'ttdl2d': {
     try {
         const sharp = require('sharp');
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Provide a URL*' }, { quoted: msg });
 
         const ownerdata = (await axios.get('https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata')).data;
         const { footer } = ownerdata;
 
         const ttRes = await axios.get('https://www.movanest.xyz/v2/tiktok', { params: { url: q } });
-        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         const mov = ttRes.data.results;
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
@@ -5970,28 +5970,28 @@ case 'ttdl2d': {
             jpegThumbnail: resizedThumb,
             caption: `📼 \`Video Watermark\`\n\n${footer}`
         }, { quoted: msg });
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
-    } catch (e) { await socket.sendMessage(sender, { text: '*🚩 TikTok Doc Error*' }, { quoted: msg }); }
+    } catch (e) { await socket.sendMessage(sender, { text: '*❌ TikTok DOCUMENT ERROR*' }, { quoted: msg }); }
     break;
 }
 case 'ttdl3d': {
     try {
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ කරුණාකර url එකක් ලබා දෙන්න Provide a URL*' }, { quoted: msg });
 
         const ownerdata = (await axios.get('https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata')).data;
         const { footer } = ownerdata;
 
         const ttRes = await axios.get('https://www.movanest.xyz/v2/tiktok', { params: { url: q } });
-        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+        if (!ttRes.data.status || !ttRes.data.results) return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         const mov = ttRes.data.results;
 
         await socket.sendMessage(sender, { react: { text: '⬆️', key: msg.key } });
         await socket.sendMessage(sender, { audio: { url: mov.music }, mimetype: 'audio/mpeg', ptt: true }, { quoted: msg });
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
-    } catch (e) { await socket.sendMessage(sender, { text: '*🚩 TikTok PTT Error*' }, { quoted: msg }); }
+    } catch (e) { await socket.sendMessage(sender, { text: '*❌ TikTok PTT ERROR*' }, { quoted: msg }); }
     break;
 }
 case 'xvideo': {
