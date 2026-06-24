@@ -4030,29 +4030,7 @@ END:VCARD`
                         }
                     },
                     nativeFlowMessage: {
-                        buttons: [
-                            {
-                                name: "quick_reply",
-                                buttonParamsJson: JSON.stringify({
-                                    display_text: "❄ 𝐌𝙰𝙸𝙽 𝐌𝙴𝙽𝚄",
-                                    id: `${prefix}menu`
-                                })
-                            },
-                            {
-                                name: "quick_reply",
-                                buttonParamsJson: JSON.stringify({
-                                    display_text: "❄ 𝐒𝙿𝙴𝙴𝙳 𝐓𝙴𝚂𝚃",
-                                    id: `${prefix}ping`
-                                })
-                            },
-                            {
-                                name: "quick_reply",
-                                buttonParamsJson: JSON.stringify({
-                                    display_text: "❄ 𝐎𝚆𝙽𝙴𝚁",
-                                    id: `${prefix}owner`
-                                })
-                            }
-                        ]
+                        buttons: []
                     }
                 }
             }
