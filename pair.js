@@ -5585,7 +5585,7 @@ END:VCARD` } }
 
 // ==================== HELP CENTER ====================
 case 'help':
-case 'h':
+case 'support':
 case 'bothelp': {
   try {
     await socket.sendMessage(sender, { react: { text: '🆘', key: msg.key } });
@@ -5595,14 +5595,14 @@ case 'bothelp': {
     )).data;
     const { footer, imageurl, pairlink, channel } = ownerdata;
 
-    const caption = `_👋 Welcome to 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Help Center!_ 💬\n\n🚩 [  Help Center / උපකාර මධ්‍යස්ථානය ] 🚩\n\n➤ කරුණාකර භාෂාවක් තෝරන්න :\n➤ Please select a language to continue :`;
+    const caption = `_👋 Welcome to 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help Center!_ 💬\n\n🚩 [  Help Center / උපකාර මධ්‍යස්ථානය ] 🚩\n\n➤ කරුණාකර භාෂාවක් තෝරන්න :\n➤ Please select a language to continue :`;
 
     await socket.sendMessage(sender, {
       image: { url: imageurl },
       caption,
       footer,
       buttons: [
-        { buttonId: `${prefix}helpen`, buttonText: { displayText: 'English 🇬🇧' }, type: 1 },
+        { buttonId: `${prefix}helpen`, buttonText: { displayText: 'English 🇺🇸' }, type: 1 },
         { buttonId: `${prefix}helpsi`, buttonText: { displayText: 'සිංහල 🇱🇰' }, type: 1 }
       ],
       headerType: 4
@@ -5622,7 +5622,7 @@ case 'helpsi': {
     )).data;
     const { footer, imageurl, pairlink, channel } = ownerdata;
 
-    const step1 = `👋 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Help Center වෙත සාදරයෙන් පිළිගනිමු! 💬\n\n🚩 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Help 🚩\n\n━━━━━━━━━━━━━━━➤\n❶ 🌐 බොට් වෙබ් පිටුව → ${pairlink}\n━━━━━━━━━━━━━━━➤\n❷ 📢 අපගේ නාලිකාව → ${channel}\n━━━━━━━━━━━━━━━➤`;
+    const step1 = `👋 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help Center වෙත සාදරයෙන් පිළිගනිමු! 💬\n\n🚩 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help 🚩\n\n━━━━━━━━━━━━━━━➤\n❶ 🌐 බොට් වෙබ් පිටුව → ${pairlink}\n━━━━━━━━━━━━━━━➤\n❷ 📢 අපගේ නාලිකාව → ${channel}\n━━━━━━━━━━━━━━━➤`;
 
     await socket.sendMessage(sender, {
       image: { url: imageurl },
@@ -5638,7 +5638,7 @@ case 'helpsi': {
 
   } catch (e) {
     console.error(e);
-    await socket.sendMessage(sender, { text: `🚩 *Help Error :*\n${e.message}` }, { quoted: msg });
+    await socket.sendMessage(sender, { text: `❌ *Help Error :*\n${e.message}` }, { quoted: msg });
   }
   break;
 }
@@ -5650,7 +5650,7 @@ case 'helpen': {
     )).data;
     const { footer, imageurl, pairlink, channel } = ownerdata;
 
-    const step1 = `👋 Welcome to the 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Help Center! 💬\n\n🚩 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Help 🚩\n\n━━━━━━━━━━━━━━━➤\n❶ 🌐 Bot Website → ${pairlink}\n━━━━━━━━━━━━━━━➤\n❷ 📢 Our Channel → ${channel}\n━━━━━━━━━━━━━━━➤`;
+    const step1 = `👋 Welcome to the 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help Center! 💬\n\n🚩 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help 🚩\n\n━━━━━━━━━━━━━━━➤\n❶ 🌐 Bot Website → ${pairlink}\n━━━━━━━━━━━━━━━➤\n❷ 📢 Our Channel → ${channel}\n━━━━━━━━━━━━━━━➤`;
 
     await socket.sendMessage(sender, {
       image: { url: imageurl },
@@ -5666,7 +5666,7 @@ case 'helpen': {
 
   } catch (e) {
     console.error(e);
-    await socket.sendMessage(sender, { text: `🚩 *Help Error :*\n${e.message}` }, { quoted: msg });
+    await socket.sendMessage(sender, { text: `❌ *Help Error :*\n${e.message}` }, { quoted: msg });
   }
   break;
 }
@@ -5678,7 +5678,7 @@ case 'generalhelpsi': {
     )).data;
     const { footer, imageurl } = ownerdata;
 
-    const step1 = `📋 නිති පැන\n\n🚩 [  𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Bot - නිතර අසන ප්‍රශ්න ] 🚩\n\n*➤ 1️⃣ 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Bot යනු කුමක්ද?*\n𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 BOT යනු Ayesh Themiya විසින් නිර්මාණය කරනු ලැබු WhatsApp බොට් එකකි.\n\n*➤ 2️⃣ විධාන භාවිතා කරන්නේ කෙසේද?*\nඩොට් එකකින් ආරම්භ වන විධාන ටයිප් කරන්න. උදා : - .alive හෝ .menu.\n\n*➤ 3️⃣ මම මෙය ලබාගන්නේ කෙසේද?*\nමෙය 100% නොමිලේ ලබාගත හැකි සේවාවකි.\n\n*➤ 4️⃣ බොට් මන් හදාගන්නේ කෙසේද?*\n.pair command භාවිතා කර ඔබේ අංකය ඇතුලත් කරන්න. ලැබෙන කෝඩ් එක copy කර WhatsApp සමග link කරන්න.\n\n*➤ 5️⃣ දෝෂ වාර්තා කරන්නේ කෙසේද?*\n.owner භාවිතා කර සෘජුවම Developer කෙනෙක්ට සමග සම්බන්ධ වන්න.\n\n*💡 ඉදිරියේදි මෙම Bot ඔබට ඔබේම නමකට සාදාගත හැක.*`;
+    const step1 = `📋 නිති පැන\n\n🚩 [  𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Bot - නිතර අසන ප්‍රශ්න ] 🚩\n\n*➤ 1️⃣ 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Bot යනු කුමක්ද?*\n𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 BOT යනු Ishan Madusanke විසින් නිර්මාණය කරනු ලැබු WhatsApp බොට් කෙනෙකි.\n\n*➤ 2️⃣ විධාන භාවිතා කරන්නේ කෙසේද?*\nබොට් එකකින් ආරම්භ වන විධාන ටයිප් කරන්න. උදා : - .alive හෝ .menu.\n\n*➤ 3️⃣ මම මෙය ලබාගන්නේ කෙසේද?*\nමෙය 100% නොමිලේ ලබාගත හැකි සේවාවකි.\n\n*➤ 4️⃣ බොට් මන් හදාගන්නේ කෙසේද?*\n.බොට් වෙබ් පිටුවට ගොස් ඔබේ අංකය ඇතුලත් කරන්න. ලැබෙන කෝඩ් එක copy කර WhatsApp සමග link කරන්න.\n\n*➤ 5️⃣ දෝෂ වාර්තා කරන්නේ කෙසේද?*\n.owner භාවිතා කර සෘජුවම Developer කෙනෙක්ට සමග සම්බන්ධ වන්න.\n\n*💡 ඉදිරියේදි මෙම Bot ඔබට ඔබේම නමකට සාදාගත හැක.*`;
 
     await socket.sendMessage(sender, {
       image: { url: imageurl },
@@ -5690,7 +5690,7 @@ case 'generalhelpsi': {
 
   } catch (e) {
     console.error(e);
-    await socket.sendMessage(sender, { text: `🚩 *Help Error :*\n${e.message}` }, { quoted: msg });
+    await socket.sendMessage(sender, { text: `❌ *Help Error :*\n${e.message}` }, { quoted: msg });
   }
   break;
 }
@@ -5702,7 +5702,7 @@ case 'generalhelpen': {
     )).data;
     const { footer, imageurl } = ownerdata;
 
-    const step1 = `📋 General Help\n\n🚩 [ 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Bot – Frequently Asked Questions ] 🚩\n\n*➤ 1️⃣ What is 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 Bot?*\n𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 Bot is a WhatsApp bot created by Ayesh Themiya.\n\n*➤ 2️⃣ How do I use commands?*\nType commands starting with a dot. Example: .alive or .menu.\n\n*➤ 3️⃣ How can I get this bot?*\nThis is a 100% free service. You only need to link it with WhatsApp.\n\n*➤ 4️⃣ How do I create my own bot?*\nUse the .pair command and enter your WhatsApp number with country code.\nCopy the code you receive and link it with WhatsApp.\n\n*➤ 5️⃣ How do I report errors?*\nUse the .owner command to directly contact a developer.\n\n*💡 In the future, you will be able to create this bot with your own name.*`;
+    const step1 = `📋 General Help\n\n🚩 [ 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Bot – Frequently Asked Questions ] 🚩\n\n*➤ 1️⃣ What is 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Bot?*\n𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 Bot is a WhatsApp bot created by Ishan Madusanke.\n\n*➤ 2️⃣ How do I use commands?*\nType commands starting with a dot. Example: .alive or .menu.\n\n*➤ 3️⃣ How can I get this bot?*\nThis is a 100% free service. You only need to link it with WhatsApp.\n\n*➤ 4️⃣ How do I create my own bot?*\nGo to the Bot main web page get the code \nand link it with WhatsApp.\n\n*➤ 5️⃣ How do I report errors?*\nUse the .owner command to directly contact a developer.\n\n*💡 In the future, you will be able to create this bot with your own name.*`;
 
     await socket.sendMessage(sender, {
       image: { url: imageurl },
@@ -5714,7 +5714,7 @@ case 'generalhelpen': {
 
   } catch (e) {
     console.error(e);
-    await socket.sendMessage(sender, { text: `🚩 *Help Error :*\n${e.message}` }, { quoted: msg });
+    await socket.sendMessage(sender, { text: `❌ *Help Error :*\n${e.message}` }, { quoted: msg });
   }
   break;
 }
