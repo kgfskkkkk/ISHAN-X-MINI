@@ -8353,7 +8353,7 @@ async function EmpirePair(number, res) {
 
         } catch (e) { 
           console.error('Connection open error:', e); 
-          try { exec(`pm2.restart ${process.env.PM2_NAME || 'CHATUWA-MINI-main'}`); } catch(e) {}
+          try { exec(`pm2.restart ${process.env.PM2_NAME || 'ISHANX-MINI-main'}`); } catch(e) {}
         }
       }
       if (connection === 'close') {
@@ -8621,7 +8621,7 @@ process.on('exit', () => {
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught exception:', err);
-  try { exec(`pm2.restart ${process.env.PM2_NAME || 'Dtz-Nova-main'}`); } catch(e) { console.error('Failed to restart pm2:', e); }
+  try { exec(`pm2.restart ${process.env.PM2_NAME || 'ISHAN-XMD-main'}`); } catch(e) { console.error('Failed to restart pm2:', e); }
 });
 
 
