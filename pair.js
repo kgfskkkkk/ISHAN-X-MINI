@@ -43,7 +43,7 @@ const config = {
   WORK_TYPE: 'public',
   OWNER_NUMBER: process.env.OWNER_NUMBER || '94778761926',
   CHANNEL_LINK: 'https://chat.whatsapp.com/HRIlSELlxO5JQo2gYL4MzV?mode=gi_t',
-  BOT_NAME: '𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 🧑‍💻🇱🇰',
+  BOT_NAME: '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝐏𝐑𝐎 🧑‍💻🇱🇰',
   BOT_VERSION: '*7.0.0 ᴘʀᴏ*',
   OWNER_NAME: '© 𝙸𝚂𝙷𝙰𝙽-𝙼𝙰𝙳𝚄𝚂𝙰𝙽𝙺𝙴',
   IMAGE_PATH: 'https://files.catbox.moe/qb2puf.jpeg',
