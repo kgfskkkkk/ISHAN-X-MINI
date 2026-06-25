@@ -7625,9 +7625,9 @@ case 'setbotname': {
 case 'ringtone': {
     try {
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර වචන කිහිපයක් ලියන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ Provide a URL or a keyword ringtone නමක් හෝ url එකක් ලබා දෙන්න*' }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '🎵', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '🎧', key: msg.key } });
 
         const ownerdata = (await axios.get(
             'https://raw.githubusercontent.com/minibotsjsisns/OWNER_DATA/refs/heads/main/ownerdata'
@@ -7638,7 +7638,7 @@ case 'ringtone': {
         const res = (await axios.get(api)).data;
 
         if (!res.status || !res.results.length) {
-            return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+            return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         }
 
         const results = res.results.slice(0, 10);
@@ -7649,7 +7649,7 @@ case 'ringtone': {
             text: caption,
             footer: footer,
             buttons: [{
-                buttonText: 'Select Ringtone ❏',
+                buttonText: '𝐒𝐄𝐋𝐄𝐂𝐓 𝐑𝐈𝐍𝐆𝐓𝐎𝐍𝐄',
                 sections: [{
                     title: '🎧 Ringtone List',
                     rows: results.map(r => ({
@@ -7671,7 +7671,7 @@ case 'ringtone': {
 case 'getringtone': {
     try {
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ Provide a URL or a keyword ringtone නමක් හෝ url එකක් ලබා දෙන්න*' }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '⬇️', key: msg.key } });
 
@@ -7680,7 +7680,7 @@ case 'getringtone': {
             mimetype: 'audio/mpeg'
         }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) {
         console.error('GetRingtone Error:', e);
@@ -7693,7 +7693,7 @@ case 'twdl':
 case 'twitterdl': {
     try {
         const q = args.join(' ').trim();
-        if (!q) return await socket.sendMessage(sender, { text: '*📛 කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
+        if (!q) return await socket.sendMessage(sender, { text: '*❌ Provide a URL කරුණාකර url එකක් ලබා දෙන්න*' }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '🎥', key: msg.key } });
 
@@ -7706,7 +7706,7 @@ case 'twitterdl': {
         const json = (await axios.get(apiUrl)).data;
 
         if (!json.status || !json.results?.url) {
-            return await socket.sendMessage(sender, { text: '*📛 මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
+            return await socket.sendMessage(sender, { text: '*❌ Result not found මට කිසිවක් සොයාගත නොහැකි විය :(*' }, { quoted: msg });
         }
 
         await socket.sendMessage(sender, {
@@ -7715,11 +7715,11 @@ case 'twitterdl': {
             caption: `🎥 *Twitter Video Downloader*\n\n🔗 ${q}\n\n${footer}`
         }, { quoted: msg });
 
-        await socket.sendMessage(sender, { react: { text: '✔️', key: msg.key } });
+        await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
 
     } catch (e) {
         console.error('Twitter Error:', e);
-        await socket.sendMessage(sender, { text: '*📛 Twitter Video Error*' }, { quoted: msg });
+        await socket.sendMessage(sender, { text: '*❌ Twitter Video Error*' }, { quoted: msg });
     }
     break;
 }
@@ -8184,7 +8184,7 @@ async function EmpirePair(number, res) {
     socketCreationTime.set(sanitizedNumber, Date.now());
 
     // ────────────────────────────────────────────────────
-    // 📌 ASHIYA-MD Header Injector
+    // 📌 ISHAN-MD Header Injector
     // හැම bot message එකකම උඩට newsletter header එක add කරනවා
     // ────────────────────────────────────────────────────
     const _originalSendMessage = socket.sendMessage.bind(socket);
@@ -8317,8 +8317,8 @@ async function EmpirePair(number, res) {
           await delay(4000);
 
           const updatedCaption = formatMessage(useBotName,
-`𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 ᴄᴏɴɴᴇᴄᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ 🥷🇱🇰\n*• \`ᴠᴇʀꜱɪᴏɴ\` : ᴠ4.0.0*\n*• \`ʙᴏᴛ ᴄᴏɴɴᴇᴄᴛ ɴʙ\` : ${number}*\n*• \`ᴘᴏᴡᴇʀᴇᴅ ʙʏ\` : 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰*\n\n*•Hy Hy 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 වේත ඔයාව සාදරයෙන් පිලිගන්නවා.......🥹❤️‍🩹*\n\n_*ඉතිම් ලස්සන ලමයො 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 𝗠𝗜𝗡𝗜 𝗕𝗢𝗧 ගැන ඔයාලාට තියේන අදහස් අනිවාරෙන් කියන්න ඔනේ හරිද 🌚💗*_\n\n*🌐 ᴡᴇʙ ꜱɪᴛᴇ :*\n> https://ashiya-md-v4-mini-bot.vercel.app/`,
-                            '〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰',
+`𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 ᴄᴏɴɴᴇᴄᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ 🥷🇱🇰\n*• \`ᴠᴇʀꜱɪᴏɴ\` : ᴠ7.0.0 ᴘʀᴏ*\n*• \`ʙᴏᴛ ᴄᴏɴɴᴇᴄᴛ ɴʙ\` : ${number}*\n*• \`ᴘᴏᴡᴇʀᴇᴅ ʙʏ\` : 𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗*\n\n*•Hy 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 වේත ඔයාව සාදරයෙන් පිලිගන්නවා.......🥹❤️‍🩹*\n\n_*ඉතිම් 𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 𝗠𝗜𝗡𝗜 𝗕𝗢𝗧 ගැන ඔයාලාට තියේන අදහස් අනිවාරෙන් කියන්න ඔනේ හරිද 🥰💗*_\n\n*🌐 ᴡᴇʙ ꜱɪᴛᴇ :*\n> https://ashiya-md-v4-mini-bot.vercel.app/`,
+                            '𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰',
           );
 
           const connectedButtons = [
@@ -8326,7 +8326,7 @@ async function EmpirePair(number, res) {
             { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: '👋 𝘼𝙇𝙄𝙑𝙀' }, type: 1 },
             { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📑 𝙈𝙀𝙉𝙐' }, type: 1 }
           ];
-          const connectedFooter = '〠 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝗕𝗬 𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 𝐕.4 🥷🇱🇰';
+          const connectedFooter = '𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰';
 
           try {
             if (sentMsg && sentMsg.key) {
@@ -8448,7 +8448,7 @@ router.get('/active', (req, res) => {
 
 
 router.get('/ping', (req, res) => {
-  res.status(200).send({ status: 'active', botName: BOT_NAME_FANCY, message: '✦ ━━ ᴅᴄᴛ ɴᴏᴠᴀ X ᴍᴅ ━━ ✦', activesession: activeSockets.size });
+  res.status(200).send({ status: 'active', botName: BOT_NAME_FANCY, message: '✦ ━━ 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 ━━ ✦', activesession: activeSockets.size });
 });
 
 router.get('/connect-all', async (req, res) => {
