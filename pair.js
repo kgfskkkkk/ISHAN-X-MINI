@@ -46,10 +46,10 @@ const config = {
   BOT_NAME: '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝐏𝐑𝐎 🧑‍💻🇱🇰',
   BOT_VERSION: '*7.0.0 ᴘʀᴏ*',
   OWNER_NAME: '© 𝙸𝚂𝙷𝙰𝙽-𝙼𝙰𝙳𝚄𝚂𝙰𝙽𝙺𝙴',
-  IMAGE_PATH: 'https://files.catbox.moe/qb2puf.jpeg',
+  IMAGE_PATH: 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000005eac720896d40b719700b3c0.png',
   SET_IMAGE_PATH: 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/4cAVV.jpg',
   BOT_FOOTER: '> _*𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*_',
-  BUTTON_IMAGES: { ALIVE: 'https://files.catbox.moe/qb2puf.jpeg' }
+  BUTTON_IMAGES: { ALIVE: 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000005eac720896d40b719700b3c0.png' }
 };
 // ---------------- MONGO SETUP ----------------
 
