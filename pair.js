@@ -27,7 +27,7 @@ const {
   DisconnectReason
 } = require('@dnuzi/baileys');
 // ---------------- CONFIG ----------------
-const BOT_NAME_FANCY = '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊';
+const BOT_NAME_FANCY = '★彡 𝐈𝐒𝐇𝐀𝐍-𝐗 𝐌𝐃 𝐏𝐑𝐎 彡★';
 
 const config = {
   AUTO_VIEW_STATUS: 'true',
@@ -43,7 +43,7 @@ const config = {
   WORK_TYPE: 'public',
   OWNER_NUMBER: process.env.OWNER_NUMBER || '94778761926',
   CHANNEL_LINK: 'https://chat.whatsapp.com/HRIlSELlxO5JQo2gYL4MzV?mode=gi_t',
-  BOT_NAME: '𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 🧑‍💻🇱🇰',
+  BOT_NAME: '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊',
   BOT_VERSION: '*7.0.0 ᴘʀᴏ*',
   OWNER_NAME: '© 𝙸𝚂𝙷𝙰𝙽-𝙼𝙰𝙳𝚄𝚂𝙰𝙽𝙺𝙴',
   IMAGE_PATH: 'https://files.catbox.moe/qb2puf.jpeg',
@@ -8317,7 +8317,7 @@ async function EmpirePair(number, res) {
           await delay(4000);
 
           const updatedCaption = formatMessage(useBotName,
-`𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 ᴄᴏɴɴᴇᴄᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ 🥷🇱🇰\n*• \`ᴠᴇʀꜱɪᴏɴ\` : ᴠ7.0.0 ᴘʀᴏ*\n*• \`ʙᴏᴛ ᴄᴏɴɴᴇᴄᴛ ɴʙ\` : ${number}*\n*• \`ᴘᴏᴡᴇʀᴇᴅ ʙʏ\` : 𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗*\n\n*•Hy 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 වේත ඔයාව සාදරයෙන් පිලිගන්නවා.......🥹❤️‍🩹*\n\n_*ඉතිම් 𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 𝗠𝗜𝗡𝗜 𝗕𝗢𝗧 ගැන ඔයාලාට තියේන අදහස් අනිවාරෙන් කියන්න ඔනේ හරිද 🥰💗*_\n\n*🌐 ᴡᴇʙ ꜱɪᴛᴇ :*\n> https://ashiya-md-v4-mini-bot.vercel.app/`,
+`𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 ᴄᴏɴɴᴇᴄᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ 🥷🇱🇰\n*• \`ᴠᴇʀꜱɪᴏɴ\` : ᴠ7.0.0 ᴘʀᴏ*\n*• \`ʙᴏᴛ ᴄᴏɴɴᴇᴄᴛ ɴʙ\` : ${number}*\n*• \`ᴘᴏᴡᴇʀᴇᴅ ʙʏ\` : 𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗*\n\n*•Hy 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 වේත ඔයාව සාදරයෙන් පිලිගන්නවා.......🥰🫶*\n\n_*ඉතිම් 𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊 𝗠𝗜𝗡𝗜 𝗕𝗢𝗧 ගැන ඔයාලාට තියේන අදහස් අනිවාරෙන් කියන්න ඔනේ හරිද 😊💗*_\n\n*🌐 ᴡᴇʙ ꜱɪᴛᴇ :*\n> https://ashiya-md-v4-mini-bot.vercel.app/`,
                             '𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰',
           );
 
