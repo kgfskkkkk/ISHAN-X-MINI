@@ -5139,7 +5139,7 @@ case 'showconfig': {
   break;
 }
 
-case 'resetconfig': {
+case 'resetsettings': {
   const sanitized = (number || '').replace(/[^0-9]/g, '');
   const senderNum = (nowsender || '').split('@')[0];
   const ownerNum = config.OWNER_NUMBER.replace(/[^0-9]/g, '');
@@ -7339,7 +7339,7 @@ case 'admins': {
     const list = await loadAdminsFromMongo();
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊';
 
     const shonux = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_ADMINS" },
@@ -7358,7 +7358,7 @@ case 'admins': {
     console.error('admins error', e);
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
+    const title = userCfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊';
     const shonux = {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_FAKE_ID_ADMINS2" },
       message: { contactMessage: { displayName: title, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${title};;;;\nFN:${title}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
@@ -7430,7 +7430,7 @@ case 'setlogo': {
 case 'jid': {
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     const cfg = await loadUserConfigFromMongo(sanitized) || {};
-    const botName = cfg.botName || '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰'; // dynamic bot name
+    const botName = cfg.botName || '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝙋𝙍𝙊'; // dynamic bot name
 
     const userNumber = sender.split('@')[0]; 
 
@@ -7463,7 +7463,7 @@ case 'block': {
     // allow if caller is global owner OR this session's owner
     if (callerNumberClean !== ownerNumberClean && callerNumberClean !== sessionOwner) {
       try { await socket.sendMessage(sender, { react: { text: "❌", key: msg.key } }); } catch(e){}
-      await socket.sendMessage(sender, { text: '❌ ඔබට මෙය භාවිත කිරීමට අවසර නැත. (Owner හෝ මෙහි session owner විය යුතුයි)' }, { quoted: msg });
+      await socket.sendMessage(sender, { text: '❌ You do not have permission to use this. (You must be the Owner or the session owner here)' }, { quoted: msg });
       break;
     }
 
@@ -7484,7 +7484,7 @@ case 'block': {
 
     if (!targetJid) {
       try { await socket.sendMessage(sender, { react: { text: "❌", key: msg.key } }); } catch(e){}
-      await socket.sendMessage(sender, { text: '❗ කරුණාකර reply කරන හෝ mention කරන හෝ number එක යොදන්න. උදාහරණය: .block 9477xxxxxxx' }, { quoted: msg });
+      await socket.sendMessage(sender, { text: '❗ Please reply to, mention, or enter the number. Example: .block 9477xxxxxxx' }, { quoted: msg });
       break;
     }
 
@@ -7526,7 +7526,7 @@ case 'unblock': {
     // allow if caller is global owner OR this session's owner
     if (callerNumberClean !== ownerNumberClean && callerNumberClean !== sessionOwner) {
       try { await socket.sendMessage(sender, { react: { text: "❌", key: msg.key } }); } catch(e){}
-      await socket.sendMessage(sender, { text: '❌ ඔබට මෙය භාවිත කිරීමට අවසර නැත. (Owner හෝ මෙහි session owner විය යුතුයි)' }, { quoted: msg });
+      await socket.sendMessage(sender, { text: '❌ You do not have permission to use this. (You must be the Owner or the session owner here)' }, { quoted: msg });
       break;
     }
 
@@ -7547,7 +7547,7 @@ case 'unblock': {
 
     if (!targetJid) {
       try { await socket.sendMessage(sender, { react: { text: "❌", key: msg.key } }); } catch(e){}
-      await socket.sendMessage(sender, { text: '❗ කරුණාකර reply කරන හෝ mention කරන හෝ number එක යොදන්න. උදාහරණය: .unblock 9477xxxxxxx' }, { quoted: msg });
+      await socket.sendMessage(sender, { text: '❗ Please reply to, mention, or enter the number. Example: .unblock 9477xxxxxxx' }, { quoted: msg });
       break;
     }
 
@@ -7597,7 +7597,7 @@ case 'setbotname': {
       key: { remoteJid: "status@broadcast", participant: "0@s.whatsapp.net", fromMe: false, id: "META_AI_SETBOTNAME2" },
       message: { contactMessage: { displayName: BOT_NAME_FANCY, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${BOT_NAME_FANCY};;;;\nFN:${BOT_NAME_FANCY}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD` } }
     };
-    return await socket.sendMessage(sender, { text: '❗ Provide bot name. Example: `.setbotname ✦ ━━ ᴅᴄᴛ ɴᴏᴠᴀ X ᴍᴅ ━━ ✦`' }, { quoted: shonux });
+    return await socket.sendMessage(sender, { text: '❗ Provide bot name. Example: `.setbotname ✦ ━━ 𝙸𝚂𝙷𝙰𝙽-𝚇 BOT ━━ ✦`' }, { quoted: shonux });
   }
 
   try {
