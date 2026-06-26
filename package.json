@@ -1,6 +1,6 @@
 {
-  "name": "dtecmini",
-  "version": "1.0.0",
+  "name": "ishanxmd",
+  "version": "7.0.0",
   "description": " WhatsApp Bot with Multi-Number Support",
   "main": "index.js",
   "scripts": {
@@ -53,8 +53,8 @@
     "bot",
     "multi-device",
     "baileys",
-    "dtec"
+    "ishanx"
   ],
-  "author": "dula",
+  "author": "ishan",
   "license": "MIT"
 }
