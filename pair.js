@@ -7141,7 +7141,7 @@ END:VCARD`
     };
 
     // API request
-    let apiUrl = `https://nntech-free-insta-api.vercel.app/?url=${encodeURIComponent(q)}`;
+    let apiUrl = `https://api.zanta-mini.store/api/insta?apiKey=zanta_7ro9KBaXFR4ZQz6eyNSQsD5P&url=${encodeURIComponent(q)}`;
     let { data: apiRes } = await axios.get(apiUrl).catch(() => ({ data: null }));
 
     // Normalize response -> { status, downloadUrl }
