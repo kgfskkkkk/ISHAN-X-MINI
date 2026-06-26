@@ -7,7 +7,7 @@ const config = {
   AUTO_LIKE_EMOJI: ['❤️', '💸', '😇', '🍂', '💥', '💯', '🔥', '💫', '💎', '💗', '🤍', '🖤', '👀', '🙌', '🙆', '🚩', '🥰', '💐', '😎', '🤎', '✅', '🫀', '🧡', '😁', '🎧', '🌸', '🕊️', '🌷', '⛅', '🌟', '🗿', '💜', '💙', '🌝', '🖤','❓', '💤', '💚','☘️','❤️‍🩹','🫂','🙈','🍁','🙃','🧸','😘','🏴‍☠️','👀','❤️‍🔥'],
   PREFIX: '.',
   MAX_RETRIES: 3,
-  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/BImUUJCwXoTITNHX61yUsb',
+  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/KtGuIzicrty4idprouuLE6',
   IMAGE_PATH: 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000005eac720896d40b719700b3c0.png',
   NEWSLETTER_JID: '120363421675697127@newsletter',
   OTP_EXPIRY: 300000,
