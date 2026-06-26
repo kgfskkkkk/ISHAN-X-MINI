@@ -7141,7 +7141,7 @@ END:VCARD`
     };
 
     // API request
-    let apiUrl = `https://api-aswin-sparky.koyeb.app/api/downloader/igdl?url=${encodeURIComponent(q)}`;
+    let apiUrl = `https://nntech-free-insta-api.vercel.app/?url=${encodeURIComponent(q)}`;
     let { data: apiRes } = await axios.get(apiUrl).catch(() => ({ data: null }));
 
     // Normalize response -> { status, downloadUrl }
