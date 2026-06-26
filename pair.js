@@ -5327,7 +5327,7 @@ END:VCARD` } }
         };
 
         const query = args.join(" ");
-        const apiKey = "AIzaSyCJrUtsnyyDxa4KXa1VnKGa4UziYhqT0";
+        const apiKey = "AIzaSyDMbI3nvmQUrfjoCJYLS69Lej1hSXQjnWI";
         const cx = "baf9bdb0c631236e5";
         const apiUrl = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&key=${apiKey}&cx=${cx}`;
 
