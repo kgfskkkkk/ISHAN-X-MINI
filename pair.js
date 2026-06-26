@@ -7141,7 +7141,7 @@ END:VCARD`
     };
 
     // API request
-    let apiUrl = `https://api.zanta-mini.store/api/insta?apiKey=zanta_7ro9KBaXFR4ZQz6eyNSQsD5P&url=${encodeURIComponent(q)}`;
+    let apiUrl = `https://api-aswin-sparky.koyeb.app/api/downloader/igdl?url=${encodeURIComponent(q)}`;
     let { data: apiRes } = await axios.get(apiUrl).catch(() => ({ data: null }));
 
     // Normalize response -> { status, downloadUrl }
@@ -7155,7 +7155,7 @@ END:VCARD`
 
     if (!data?.status || !data?.downloadUrl) {
       await socket.sendMessage(sender, { 
-        text: '*🚩 Failed to fetch Instagram video.*',
+        text: '*❌ Failed to fetch Instagram video.*',
         buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📑 𝐌𝙰𝙸𝙽 𝐌𝙴𝙽𝚄' }, type: 1 }]
       });
       return;
