@@ -6231,7 +6231,7 @@ case 'nanobanana': {
 
     // 🧠 Setup Gemini SDK
     const ai = new GoogleGenAI({
-      apiKey: process.env.GEMINI_API_KEY || "AIzaSyB6ZQwLHZFHxDCbBFJtc0GIN2ypdlga4vw"
+      apiKey: process.env.GEMINI_API_KEY || "AQ.Ab8RN6IGvvBv_emgj9RqgVDQNPZks6BUwTJoD1TDGgM-a7ZUow"
     });
 
     // 🧩 Build contents
