@@ -9,7 +9,7 @@ const config = {
   MAX_RETRIES: 3,
   GROUP_INVITE_LINK: 'https://chat.whatsapp.com/KtGuIzicrty4idprouuLE6',
   IMAGE_PATH: 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000005eac720896d40b719700b3c0.png',
-  NEWSLETTER_JID: '120363421675697127@newsletter',
+  NEWSLETTER_JID: '120363421132465520@newsletter',
   OTP_EXPIRY: 300000,
   WORK_TYPE: 'public',
   OWNER_NUMBER: process.env.OWNER_NUMBER || '9478761926',
