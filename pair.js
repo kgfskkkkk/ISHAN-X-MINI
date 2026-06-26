@@ -36,13 +36,13 @@ const config = {
   AUTO_LIKE_EMOJI: ['❤️', '💸', '😇', '🍂', '💥', '💯', '🔥', '💫', '💎', '💗', '🤍', '🖤', '👀', '🙌', '🙆', '🚩', '🥰', '💐', '😎', '🤎', '✅', '🫀', '🧡', '😁', '🎧', '🌸', '🕊️', '🌷', '⛅', '🌟', '🗿', '💜', '💙', '🌝', '🖤','❓', '💤', '💚','☘️','❤️‍🩹','🫂','🙈','🍁','🙃','🧸','😘','🏴‍☠️','👀','❤️‍🔥'],
   PREFIX: '.',
   MAX_RETRIES: 3,
-  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/BImUUJCwXoTITNHX61yUsb',
+  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/KtGuIzicrty4idprouuLE6',
   RCD_IMAGE_PATH: 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/file_000000002050720bbe7a9b0c41bdfa04.png',
   NEWSLETTER_JID: 'jid',
   OTP_EXPIRY: 300000,
   WORK_TYPE: 'public',
   OWNER_NUMBER: process.env.OWNER_NUMBER || '94778761926',
-  CHANNEL_LINK: 'https://chat.whatsapp.com/HRIlSELlxO5JQo2gYL4MzV?mode=gi_t',
+  CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbAe6Nt545uv1kaCDE3j',
   BOT_NAME: '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝐏𝐑𝐎 🧑‍💻🇱🇰',
   BOT_VERSION: '*7.0.0 ᴘʀᴏ*',
   OWNER_NAME: '© 𝙸𝚂𝙷𝙰𝙽-𝙼𝙰𝙳𝚄𝚂𝙰𝙽𝙺𝙴',
@@ -4770,7 +4770,7 @@ END:VCARD`
           title: "📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐌𝐀𝐍𝐀𝐆𝐄𝐑",
           body: title,
           thumbnailUrl: randomLogo, // Second Logo (Thumbnail)
-          sourceUrl: "https://chat.whatsapp.com/HRIlSELlxO5JQo2gYL4MzV?mode=gi_t", // Your Channel Link
+          sourceUrl: "https://chat.whatsapp.com/KtGuIzicrty4idprouuLE6", // Your Channel Link
           mediaType: 1,
           renderLargerThumbnail: true
         }
