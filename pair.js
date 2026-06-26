@@ -1192,7 +1192,7 @@ case 'down_1080': {
 
         // Primary API: movanest
         try {
-            const apiUrl = `https://www.movanest.xyz/v2/ytdown?url=${encodeURIComponent(q)}&quality=${quality}`;
+            const apiUrl = `https://nntech-free-yt-api.vercel.app/api/download/mp4?url=${encodeURIComponent(q)}&quality=${quality}`;
             const res = await axios.get(apiUrl, { timeout: 25000 });
             if (res.data?.status && res.data?.download?.link) {
                 json = res.data;
