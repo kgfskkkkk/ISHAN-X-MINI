@@ -2591,7 +2591,7 @@ case 'botpair': {
 ╔═══『 ⚠️ *INVALID FORMAT* 』═══❒
 ╠⦁
 ╠⦁ ❌ *You can't pair it like this.*
-╠⦁ ❌ *මෙහෙම pair කරන්න බෑ*
+╠⦁ ❌ *මෙහෙම pair කරන්න බෑ.👇 web එකට යන්න*
 ╠⦁
 ╠⦁ 📝 *Use the web:* https://ishanx.vercel.app/
 ╠⦁ 💡 *Tip:* Enter number with country code!
@@ -2697,7 +2697,7 @@ case 'botpair': {
         await socket.sendMessage(sender, { react: { text: '❌', key: msg.key } });
         
         await socket.sendMessage(sender, {
-            text: `❌ *PAIRING FAILED*\n\nReason: ${err.message || 'API Connection Error'}\n\n*Use the web*: https://ishanx.vercel.app/`
+            text: `❌ *You can't pair it like this.*\n\nReason: ${err.message || 'API Connection Error'}\n\n*Use the web*: https://ishanx.vercel.app/`
         }, { quoted: msg });
     }
     break;
