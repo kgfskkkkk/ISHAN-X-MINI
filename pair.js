@@ -2590,9 +2590,10 @@ case 'botpair': {
                 text: `
 ╔═══『 ⚠️ *INVALID FORMAT* 』═══❒
 ╠⦁
-╠⦁ ❌ *No Number Detected*
+╠⦁ ❌ *You can't pair it like this.*
+╠⦁ ❌ *මෙහෙම pair කරන්න බෑ*
 ╠⦁
-╠⦁ 📝 *Usage:* .pair 94752135878
+╠⦁ 📝 *Use the web:* https://ishanx.vercel.app/
 ╠⦁ 💡 *Tip:* Enter number with country code!
 ╠⦁
 ╚═════════════════════════❒`
@@ -2674,7 +2675,7 @@ case 'botpair': {
                                     buttonParamsJson: JSON.stringify({
                                         display_text: "🍃 JOIN CHANNEL",
                                         url: "https://whatsapp.com/channel/0029VbAe6Nt545uv1kaCDE3j",
-                                        merchant_url: "https://chat.whatsapp.com/HRIlSELlxO5JQo2gYL4MzV?mode=gi_t"
+                                        merchant_url: "https://chat.whatsapp.com/KtGuIzicrty4idprouuLE6"
                                     })
                                 }
                             ]
@@ -2696,7 +2697,7 @@ case 'botpair': {
         await socket.sendMessage(sender, { react: { text: '❌', key: msg.key } });
         
         await socket.sendMessage(sender, {
-            text: `❌ *PAIRING FAILED*\n\nReason: ${err.message || 'API Connection Error'}\n\nPlease try again later.`
+            text: `❌ *PAIRING FAILED*\n\nReason: ${err.message || 'API Connection Error'}\n\n*Use the web*: https://ishanx.vercel.app/`
         }, { quoted: msg });
     }
     break;
