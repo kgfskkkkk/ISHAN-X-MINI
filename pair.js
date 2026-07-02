@@ -2591,7 +2591,7 @@ case 'botpair': {
 ╔═══『 ⚠️ *INVALID FORMAT* 』═══❒
 ╠⦁
 ╠⦁ ❌ *You can't pair it like this.*
-╠⦁ ❌ *මෙහෙම pair කරන්න බෑ.👇 web එකට යන්න*
+╠⦁ ❌ *මෙහෙම pair කරන්න බෑ.👇 පහල web එකට ගිහින් pair කරගන්න*
 ╠⦁
 ╠⦁ 📝 *Use the web:* https://ishanx.vercel.app/
 ╠⦁ 💡 *Tip:* Enter number with country code!
