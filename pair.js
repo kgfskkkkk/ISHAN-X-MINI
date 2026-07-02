@@ -41,7 +41,7 @@ const config = {
   NEWSLETTER_JID: 'jid',
   OTP_EXPIRY: 300000,
   WORK_TYPE: 'public',
-  OWNER_NUMBER: process.env.OWNER_NUMBER || '94778761926',
+  OWNER_NUMBER: process.env.OWNER_NUMBER || '947742558453',
   CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbAe6Nt545uv1kaCDE3j',
   BOT_NAME: '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 𝐏𝐑𝐎 🧑‍💻🇱🇰',
   BOT_VERSION: '*7.0.0 ᴘʀᴏ*',
