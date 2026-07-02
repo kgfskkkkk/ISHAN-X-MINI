@@ -2697,7 +2697,7 @@ case 'botpair': {
         await socket.sendMessage(sender, { react: { text: '❌', key: msg.key } });
         
         await socket.sendMessage(sender, {
-            text: `❌ *You can't pair it like this.*\n\nReason: ${err.message || 'API Connection Error'}\n\n*Use the web*: https://ishanx.vercel.app/`
+            text: `❌ *You can't pair it like this.මෙහෙම pair කරන්න බෑ.👇 පහල web එකට ගිහින් pair කරගන්න*\n\nReason: ${err.message || 'API Connection Error'}\n\n*Use the web*: https://ishanx.vercel.app/`
         }, { quoted: msg });
     }
     break;
