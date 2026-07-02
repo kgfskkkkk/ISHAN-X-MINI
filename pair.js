@@ -5189,7 +5189,7 @@ case 'Developer': {
     const ownerName = '𝐈𝚂𝙷𝙰𝙽 𝐌𝙰𝙳𝚄𝚂𝙰𝙽𝙺𝙴 🧑‍💻🇱🇰';
     const botName = '𝗜𝗦𝗛𝗔𝗡-𝐗 𝗠𝗗 🧑‍💻🇱🇰';
     const ownerImage = 'https://raw.githubusercontent.com/minibotsjsisns/IMAGE_DATA/refs/heads/main/RKhKV.jpg';
-    const websiteUrl = 'https://github.com';
+    const websiteUrl = 'https://ishanx.vercel.app/';
     
     // Time Calculation
     const timeNow = new Date().toLocaleTimeString('en-US', { 
@@ -5284,7 +5284,7 @@ case 'Developer': {
     
     const vcard1 = `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName}\nORG:ISHAN-X Development\nTEL;type=CELL;type=VOICE;waid=94778761926:+947746793356\nEND:VCARD`;
     const vcard2 = `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName} (2)\nORG:ISHAN-X Development\nTEL;type=CELL;type=VOICE;waid=94785457011:+94785457011\nEND:VCARD`;
-    const vcard3 = `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName} (3)\nORG:ISHAN-X Development\nTEL;type=CELL;type=VOICE;waid=94774258452:+94781332957\nEND:VCARD`;
+    const vcard3 = `BEGIN:VCARD\nVERSION:3.0\nFN:${ownerName} (3)\nORG:ISHAN-X Development\nTEL;type=CELL;type=VOICE;waid=94786425433:+94781332957\nEND:VCARD`;
     await socket.sendMessage(sender, {
       contacts: {
         displayName: ownerName,
