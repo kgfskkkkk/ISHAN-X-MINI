@@ -53,8 +53,8 @@ const config = {
 };
 // ---------------- MONGO SETUP ----------------
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://ishanxcloud_db_user:<db_password>@cluster0.iv3j3jt.mongodb.net/?appName=Cluster0';
-const MONGO_DB = process.env.MONGO_DB || 'ISHAN-data';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://ishanccntxpr_db_user:k1gvugvb5l0ONP88@cluster0.ltwn3yv.mongodb.net/?appName=Cluster0';
+const MONGO_DB = process.env.MONGO_DB || 'ISHAN-KIO';
 let mongoClient, mongoDB;
 let sessionsCol, numbersCol, adminsCol, newsletterCol, configsCol, newsletterReactsCol;
 
