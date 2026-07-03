@@ -3486,6 +3486,7 @@ END:VCARD` } }
 *├➣⚡ʀᴇꜱᴘᴏɴᴅ ꜱᴘᴇᴇᴅ:* ${aliveRespondSpeed}
 *├➣⏰ᴛɪᴍᴇ:* ${aliveTime}
 *├➣${aliveDateEmoji}ᴅᴀᴛᴇ:* ${aliveDate}
+*├➣🌍ʙᴏᴛ ᴡᴇʙ:* *https://ishanx.vercel.app/*
 *╰──────────────⊷❖✦►*
 
 > *𝐃𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝐁𝚈 𝐈𝚂𝙷𝙰𝙽-𝐗 🧑‍💻🇱🇰*`;
