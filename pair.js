@@ -5625,7 +5625,7 @@ case 'helpsi': {
     )).data;
     const { footer, imageurl, pairlink, channel } = ownerdata;
 
-    const step1 = `👋 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help Center වෙත සාදරයෙන් පිළිගනිමු! 💬\n\n🚩 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help 🚩\n\n━━━━━━━━━━━━━━━➤\n❶ 🌐 බොට් වෙබ් පිටුව → ${pairlink}\n━━━━━━━━━━━━━━━➤\n❷ 📢 අපගේ නාලිකාව → ${channel}\n━━━━━━━━━━━━━━━➤`;
+    const step1 = `👋 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help Center වෙත සාදරයෙන් පිළිගනිමු! 💬\n\n🚩 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help 🚩\n\n━━━━━━━━━━━━━━━➤\n❶ 🌍 බොට් වෙබ් පිටුව → ${pairlink}\n━━━━━━━━━━━━━━━➤\n❷ 📢 අපගේ නාලිකාව → ${channel}\n━━━━━━━━━━━━━━━➤`;
 
     await socket.sendMessage(sender, {
       image: { url: imageurl },
@@ -5653,7 +5653,7 @@ case 'helpen': {
     )).data;
     const { footer, imageurl, pairlink, channel } = ownerdata;
 
-    const step1 = `👋 Welcome to the 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help Center! 💬\n\n🚩 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help 🚩\n\n━━━━━━━━━━━━━━━➤\n❶ 🌐 Bot Website → ${pairlink}\n━━━━━━━━━━━━━━━➤\n❷ 📢 Our Channel → ${channel}\n━━━━━━━━━━━━━━━➤`;
+    const step1 = `👋 Welcome to the 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help Center! 💬\n\n🚩 𝙸𝚂𝙷𝙰𝙽-𝚇 𝙼𝙳 𝙿𝚁𝙾 Help 🚩\n\n━━━━━━━━━━━━━━━➤\n❶ 🌍 Bot Website → ${pairlink}\n━━━━━━━━━━━━━━━➤\n❷ 📢 Our Channel → ${channel}\n━━━━━━━━━━━━━━━➤`;
 
     await socket.sendMessage(sender, {
       image: { url: imageurl },
