@@ -8181,7 +8181,7 @@ async function EmpirePair(number, res) {
       logger,
       version,
       // 🛠️ FIX: Updated browser string & dynamic WA version to fix connection rejection
-      browser: Browsers.ubuntu('Chrome')
+      browser: Browsers.macOS('Safari')
     });
 
     socketCreationTime.set(sanitizedNumber, Date.now());
